@@ -1,4 +1,3 @@
-
 ---
 name: Bugs Reports
 about: Use this template for reporting defect or bugs.

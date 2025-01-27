@@ -2,19 +2,21 @@
 
 import CircleButton from "@/components/circle-button/circle-button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const WulanganPage = () => {
+  const router = useRouter();
   const handleFigureClick = () => {
     console.log("figure clicked");
   };
 
   const handleVideoClick = () => {
-    console.log("video clicked");
+    router.push("/wulangan/video");
   };
 
   const handleBackClick = () => {
-    console.log("back clicked");
+    router.replace("/");
   };
 
   return (

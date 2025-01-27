@@ -8,7 +8,7 @@ interface CircleButtonProps {
 const CircleButton: FC<CircleButtonProps> = ({ children, onClick }) => {
   return (
     <button
-      className="bg-third-color aspect-square rounded-full flex justify-center items-center p-4"
+      className="bg-third-color aspect-square rounded-full flex justify-center items-center p-6"
       onClick={onClick}
     >
       {children}

@@ -8,7 +8,7 @@ import React from "react";
 const WulanganPage = () => {
   const router = useRouter();
   const handleFigureClick = () => {
-    console.log("figure clicked");
+    router.push("/wulangan/profile-figure");
   };
 
   const handleVideoClick = () => {

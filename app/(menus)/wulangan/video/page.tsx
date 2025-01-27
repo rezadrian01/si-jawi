@@ -28,14 +28,17 @@ const VideoPage = () => {
           {/* Placeholder */}
           <div className="relative -mb-14">
             <Image
+              className="w-[35rem]"
               src="/bubble-chat-4.svg"
               alt="bubble-chat"
               width={500}
               height={500}
             />
             <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-2xl w-9/12">
-              Ana ing sisih kiwa iki materi teks profil tokoh kang kudu
-              digatekake! Ayo sinau bebarengan!
+              Babagan ngenani teks profil tokoh sampun rampung dibahas.
+              Bocah-bocah sampun paham nggih? Saiki ana video kang isine
+              ngrembug ngenani profil tokoh Sri Aji Jayabaya. Gatekna apa isi
+              kang ana ing video kasebut. Sugeng mirsani!
             </p>
           </div>
           {/* Figure */}

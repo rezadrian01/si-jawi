@@ -4,7 +4,7 @@ import CircleButton from "@/components/circle-button/circle-button";
 import Image from "next/image";
 import React from "react";
 
-const page = () => {
+const WulanganPage = () => {
   const handleFigureClick = () => {
     console.log("figure clicked");
   };
@@ -25,7 +25,7 @@ const page = () => {
             <CircleButton onClick={handleFigureClick}>
               <Image
                 className="aspect-square w-[5rem]"
-                src="head-figure.svg"
+                src="/head-figure.svg"
                 alt="head-figure"
                 width={500}
                 height={500}
@@ -37,7 +37,7 @@ const page = () => {
             <CircleButton onClick={handleVideoClick}>
               <Image
                 className="aspect-square w-[5rem]"
-                src="record.svg"
+                src="/record.svg"
                 alt="record-logo"
                 width={500}
                 height={500}
@@ -50,7 +50,7 @@ const page = () => {
           <div className="relative w-[40rem]">
             <Image
               className="w-[40rem]"
-              src="bubble-chat-1.svg"
+              src="/bubble-chat-1.svg"
               alt="bubble-chat"
               width={500}
               height={500}
@@ -65,7 +65,7 @@ const page = () => {
           <div className="relative">
             <Image
               className="w-[40rem]"
-              src="bubble-chat-2.svg"
+              src="/bubble-chat-2.svg"
               alt="bubble-chat"
               width={500}
               height={500}
@@ -83,7 +83,7 @@ const page = () => {
       <div className="absolute bottom-0 right-0 -z-10">
         <Image
           className="w-[15rem]"
-          src="woman-figure-1.svg"
+          src="/woman-figure-1.svg"
           alt="woman-figure"
           width={500}
           height={500}
@@ -94,7 +94,7 @@ const page = () => {
       <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
         <Image
           className="max-w-[25rem]"
-          src="left-cloud.svg"
+          src="/left-cloud.svg"
           alt="cloud"
           width={500}
           height={500}
@@ -104,7 +104,7 @@ const page = () => {
       <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
         <Image
           className="max-w-[10rem]"
-          src="right-cloud.svg"
+          src="/right-cloud.svg"
           alt="cloud"
           width={500}
           height={500}
@@ -116,7 +116,7 @@ const page = () => {
         <CircleButton onClick={handleBackClick}>
           <Image
             className="aspect-square w-[3rem]"
-            src="back.svg"
+            src="/back.svg"
             alt="back-logo"
             width={500}
             height={500}
@@ -127,4 +127,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default WulanganPage;

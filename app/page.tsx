@@ -9,7 +9,7 @@ const shantellSans = Shantell_Sans({ subsets: ["latin"] })
 const notoTraditionalNushu = Noto_Traditional_Nushu({ subsets: ["latin"] })
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {

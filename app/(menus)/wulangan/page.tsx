@@ -19,6 +19,10 @@ const WulanganPage = () => {
     router.replace("/");
   };
 
+  const handleBackClick = () => {
+    console.log("back clicked");
+  };
+
   return (
     <div className="relative h-screen w-full">
       <div className="flex h-full justify-between items-center max-w-[60rem] mx-auto">

@@ -19,6 +19,10 @@ const Navbar = () => {
       return "/book.svg";
     } else if (location === "capaian-pasinaonan") {
       return "/target.svg";
+    } else if (location === "sri-aji-jayabaya") {
+      return "/book.svg";
+    } else if (location === "gladhen") {
+      return "/question.svg";
     };
 
     return "";
@@ -26,7 +30,7 @@ const Navbar = () => {
 
   return (
     <>
-        <div className='fixed top-0 left-0 w-full flex justify-between items-center p-4 z-50'>
+        <div className={`${location === "sri-aji-jayabaya" ? "sticky" : "fixed"} top-0 left-0 w-full flex justify-between items-center p-4 z-50`}>
             <div className='flex items-center gap-x-2'>
                 <Drawer />
 

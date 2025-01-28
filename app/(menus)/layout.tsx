@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Traditional_Nushu } from "next/font/google";
 import "../globals.css";
-import Navbar from "./components/navbar"
+import Navbar from "./components/navbar";
 
 const notoTraditionalNushu = Noto_Traditional_Nushu({ subsets: ["latin"] });
 
@@ -17,8 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${notoTraditionalNushu.className} antialiased bg-primary-color`}
+      <body className={`relative ${notoTraditionalNushu.className} antialiased bg-primary-color`}
       >
         <Navbar />
         {children}

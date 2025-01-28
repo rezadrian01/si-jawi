@@ -2,21 +2,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Noto_Traditional_Nushu } from "next/font/google";
+import { useRouter } from 'next/navigation';
 
 const notoTraditionalNushu = Noto_Traditional_Nushu({ subsets: ["latin"] })
 
 const Drawer = () => {
-    const drawerRef = useRef<HTMLDivElement>(null)
+    const router = useRouter();
+    const drawerRef = useRef<HTMLDivElement>(null);
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     const openDrawer = () => {
-        setIsOpen((prev) => !prev)
+        setIsOpen((prev) => !prev);
     };
 
     useEffect(() => {
         const handleClickOutsideDrawer = (e: MouseEvent) => {
             if (drawerRef.current && !drawerRef.current.contains(e.target as Node)) {
-                setIsOpen(false)
+                setIsOpen(false);
             };
         };
 
@@ -29,6 +31,10 @@ const Drawer = () => {
         return () => document.removeEventListener("mousedown", handleClickOutsideDrawer);
     }, [isOpen])
 
+    const handleRoute = (url: string) => {
+        router.push(url);
+        setIsOpen(false);
+    };
   return (
     <>
         <button type="button" onClick={openDrawer}>
@@ -43,7 +49,7 @@ const Drawer = () => {
             <ul>
                 {/* Home */}
                 <li>
-                    <button className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
+                    <button onClick={() => handleRoute("/")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
                         <div className="p-3.5 bg-[#FF8F1B] rounded-full">
                             <Image src="/home.svg" alt="home_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>
@@ -54,7 +60,7 @@ const Drawer = () => {
 
                 {/* Profile */}
                 <li>
-                    <button className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
+                    <button onClick={() => handleRoute("/profile")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
                         <div className="p-3.5 bg-[#FF8F1B] rounded-full">
                             <Image src="/profile.svg" alt="profile_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>
@@ -65,7 +71,7 @@ const Drawer = () => {
 
                 {/* Target */}
                 <li>
-                    <button className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
+                    <button onClick={() => handleRoute("/capaian-pasinaonan")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
                         <div className="p-3.5 bg-[#FF8F1B] rounded-full">
                             <Image src="/target.svg" alt="target_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>
@@ -76,7 +82,7 @@ const Drawer = () => {
 
                 {/* Wulangan */}
                 <li>
-                    <button className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
+                    <button onClick={() => handleRoute("/wulangan")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
                         <div className="p-3.5 bg-[#FF8F1B] rounded-full">
                             <Image src="/book.svg" alt="book_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>
@@ -87,7 +93,7 @@ const Drawer = () => {
 
                 {/* Sri Aji Jayabaya */}
                 <li>
-                    <button className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
+                    <button onClick={() => handleRoute("/sri-aji-jayabaya")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
                         <div className="p-1 bg-[#FF8F1B] rounded-full">
                             <Image src="/puppet.svg" alt="puppet_logo" width={500} height={500} className="w-[50.25px] h-[50.25px]" />
                         </div>
@@ -98,7 +104,7 @@ const Drawer = () => {
 
                 {/* Gladhen */}
                 <li>
-                    <button className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
+                    <button onClick={() => handleRoute("/gladhen")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
                         <div className="p-3.5 bg-[#FF8F1B] rounded-full">
                             <Image src="/question.svg" alt="question_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>

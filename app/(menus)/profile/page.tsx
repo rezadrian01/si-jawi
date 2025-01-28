@@ -7,6 +7,28 @@ import BackButton from "../components/back-button"
 const ProfilePage = () => {
   return (
     <>
+      {/* Cloud elements */}
+      <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+        <Image
+          className="max-w-[25rem]"
+          src="/left-cloud.svg"
+          alt="cloud"
+          width={500}
+          height={500}
+        />
+      </div>
+
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+        <Image
+          className="max-w-[10rem]"
+          src="/right-cloud.svg"
+          alt="cloud"
+          width={500}
+          height={500}
+        />
+      </div>
+
+      {/* Main */}
       <div className="min-h-screen min-w-full flex justify-center items-center">
         <div className="py-8 w-full max-w-3xl bg-white flex flex-col items-center mx-auto rounded-[50px] shadow-lg">
           {/* Image */}

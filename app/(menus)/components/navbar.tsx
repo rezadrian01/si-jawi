@@ -17,6 +17,8 @@ const Navbar = () => {
       return "/profile.svg";
     } else if (location === "wulangan") {
       return "/book.svg";
+    } else if (location === "capaian-pasinaonan") {
+      return "/target.svg";
     };
 
     return "";

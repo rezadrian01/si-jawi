@@ -7,14 +7,9 @@ import React from "react";
 
 const ProfileFigurePage = () => {
   const router = useRouter();
-  const handleFigureClick = () => {
-    console.log("figure clicked");
-  };
-
   const handleVideoClick = () => {
     router.push("/wulangan/video");
   };
-
   const handleBackClick = () => {
     router.replace("/");
   };

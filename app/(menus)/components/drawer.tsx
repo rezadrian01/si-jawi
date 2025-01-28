@@ -35,7 +35,6 @@ const Drawer = () => {
         router.push(url);
         setIsOpen(false);
     };
-
   return (
     <>
         <button type="button" onClick={openDrawer}>

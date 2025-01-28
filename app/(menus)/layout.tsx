@@ -17,11 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`relative ${notoTraditionalNushu.className} antialiased bg-primary-color`}
+      <body className={`relative ${notoTraditionalNushu.className} antialiased bg-primary-color`}
       >
         <Navbar />
-
         {children}
       </body>
     </html>

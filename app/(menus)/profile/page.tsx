@@ -23,7 +23,7 @@ const ProfilePage = () => {
           </div>
         </div>
       </div>
-
+      
       {/* Back Button */}
       <BackButton />
     </>

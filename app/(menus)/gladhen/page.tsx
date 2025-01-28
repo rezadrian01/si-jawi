@@ -4,9 +4,11 @@ import CircleButton from "@/components/circle-button/circle-button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import BackButton from "../components/back-button";
 
 const GladhenPage = () => {
   const router = useRouter();
+
   const handleBackClick = () => {
     router.replace("/");
   };
@@ -91,17 +93,7 @@ const GladhenPage = () => {
       </div>
 
       {/* Back Button */}
-      <div className="absolute bottom-10 left-10">
-        <CircleButton onClick={handleBackClick}>
-          <Image
-            className="aspect-square w-[3rem]"
-            src="/back.svg"
-            alt="back-logo"
-            width={500}
-            height={500}
-          />
-        </CircleButton>
-      </div>
+      <BackButton onClick={handleBackClick} />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { DynaPuff, Shantell_Sans, Noto_Traditional_Nushu } from "next/font/googl
 import Image from "next/image";
 
 const dynaPuff = DynaPuff({ subsets: ["latin"] })
-
 const shantellSans = Shantell_Sans({ subsets: ["latin"] })
 const notoTraditionalNushu = Noto_Traditional_Nushu({ subsets: ["latin"] })
 

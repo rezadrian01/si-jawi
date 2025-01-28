@@ -10,6 +10,9 @@ const ProfileFigurePage = () => {
   const handleVideoClick = () => {
     router.push("/wulangan/video");
   };
+  const handleBackClick = () => {
+    router.replace("/");
+  };
 
   return (
     <div className="h-[500vh] relative">

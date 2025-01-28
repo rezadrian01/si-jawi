@@ -21,7 +21,6 @@ export default function RootLayout({
         className={`${notoTraditionalNushu.className} antialiased bg-primary-color`}
       >
         <Navbar />
-
         {children}
       </body>
     </html>

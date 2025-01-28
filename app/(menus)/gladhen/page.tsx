@@ -5,16 +5,8 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 
-const WulanganPage = () => {
+const GladhenPage = () => {
   const router = useRouter();
-  const handleFigureClick = () => {
-    router.push("/wulangan/profile-figure");
-  };
-
-  const handleVideoClick = () => {
-    router.push("/wulangan/video");
-  };
-
   const handleBackClick = () => {
     router.replace("/");
   };
@@ -24,73 +16,58 @@ const WulanganPage = () => {
       <div className="flex h-full justify-between items-center max-w-[60rem] mx-auto">
         <div className="flex flex-col gap-44 justify-between w-full text-center">
           <div className="w-[15rem] flex flex-col justify-center items-center">
-            <CircleButton onClick={handleFigureClick}>
+            <CircleButton link="https://quizizz.com/join?gc=18290384">
               <Image
                 className="aspect-square w-[5rem]"
-                src="/head-figure.svg"
+                src="/quiz-text.svg"
                 alt="head-figure"
                 width={500}
                 height={500}
               />
             </CircleButton>
-            <h3 className="font-semibold text-xl mt-4">Teks Profile Tokoh</h3>
+            <h3 className="font-semibold text-xl mt-4">Quizziz</h3>
           </div>
           <div className="w-[15rem] flex flex-col justify-center items-center">
-            <CircleButton onClick={handleVideoClick}>
+            <CircleButton link="https://quizizz.com/join?gc=18290384">
               <Image
-                className="aspect-square w-[5rem]"
-                src="/record.svg"
+                className="aspect-square w-[5rem] p-2"
+                src="/gladhen.svg"
                 alt="record-logo"
                 width={500}
                 height={500}
               />
             </CircleButton>
-            <h3 className="font-semibold text-xl mt-4">Wulanagan Video</h3>
+            <h3 className="font-semibold text-xl mt-4">Gladhen</h3>
           </div>
         </div>
-        <div className="flex flex-col items-center justify-center gap-4 min-w-[40rem] ">
-          <div className="relative w-[40rem] -mr-[20rem]">
+        <div className="flex flex-col items-center justify-center min-w-[40rem] ">
+          <div className="relative w-[40rem] -mb-14">
             <Image
-              className="w-[40rem]"
-              src="/bubble-chat-1.svg"
+              className="w-[37rem] mx-auto"
+              src="/bubble-chat-3.svg"
               alt="bubble-chat"
               width={500}
               height={500}
             />
-            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-2xl w-9/12">
+            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[40%] left-1/2 font-semibold text-2xl w-9/12">
               Assalamualaikum bocah-bocah! Kepriye kabare? Ing kene awake dhewe
               bakal ngrembug babagan teks profil tokoh. Ana sing weruh apa iku
               teks profil tokoh? Kepriye carane nulis teks profil tokoh kuwi?
             </p>
           </div>
-
-          <div className="relative">
+          {/* Figure image */}
+          <div className="-mr-[40rem]">
             <Image
-              className="w-[40rem]"
-              src="/bubble-chat-2.svg"
-              alt="bubble-chat"
+              className="w-[15rem]"
+              src="/man-figure-3.svg"
+              alt="woman-figure"
               width={500}
               height={500}
             />
-            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[35%] left-1/2 font-semibold text-2xl w-9/12">
-              Ana ing sisih kiwa iki materi teks profil tokoh kang kudu
-              digatekake! Ayo sinau bebarengan!
-            </p>
           </div>
         </div>
       </div>
       {/* Absolute  elements */}
-
-      {/* Figure image */}
-      <div className="absolute bottom-0 right-0 -z-10">
-        <Image
-          className="w-[15rem]"
-          src="/woman-figure-1.svg"
-          alt="woman-figure"
-          width={500}
-          height={500}
-        />
-      </div>
 
       {/* Cloud elements */}
       <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
@@ -129,4 +106,4 @@ const WulanganPage = () => {
   );
 };
 
-export default WulanganPage;
+export default GladhenPage;

@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { useRouter } from "next/navigation";
 import CircleButton from "@/components/circle-button/circle-button";

@@ -39,8 +39,8 @@ const WulanganPage = () => {
           >
             <CircleButton onClick={handleFigureClick}>
               <Image
-                className="aspect-square w-[5rem]"
-                src="/head-figure.svg"
+                className="aspect-square w-[5rem] object-cover"
+                src="/images/head-figure.png"
                 alt="head-figure"
                 width={500}
                 height={500}
@@ -122,7 +122,7 @@ const WulanganPage = () => {
       >
         <Image
           className="w-[15rem]"
-          src="/woman-figure-1.svg"
+          src="/images/woman-figure-1.png"
           alt="woman-figure"
           width={500}
           height={500}

@@ -1,12 +1,13 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from "react";
 import { DynaPuff } from "next/font/google";
-import Drawer from './drawer';
-import { usePathname } from 'next/navigation';
-import Image from 'next/image';
+import Drawer from "./drawer";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
+import SiJawiButton from "./si-jawi-button";
 
-const dynaPuff = DynaPuff({ subsets: ["latin"] })
+const dynaPuff = DynaPuff({ subsets: ["latin"] });
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -23,30 +24,44 @@ const Navbar = () => {
       return "/book.svg";
     } else if (location === "gladhen") {
       return "/question.svg";
-    };
+    }
 
     return "";
   };
 
   return (
     <>
-        <div className={`${location === "sri-aji-jayabaya" ? "sticky" : "fixed"} top-0 left-0 w-full flex justify-between items-center p-4 z-50`}>
-            <div className='flex items-center gap-x-2'>
-                <Drawer />
+      <div
+        className={`${
+          location === "sri-aji-jayabaya" ? "sticky" : "fixed"
+        } top-0 left-0 w-full flex justify-between items-center p-4 z-50`}
+      >
+        <div className="flex items-center gap-x-2">
+          <Drawer />
 
-                <div className='py-2 px-4 bg-third-color rounded-3xl shadow-lg'>
-                    <h1 className={`${dynaPuff.className} text-[40px] font-bold text-white`}>Si Jawi</h1>
-                </div>
-            </div>
-
-            {typeof(getPageLogo()) === "string" && 
-              <div className="p-4 rounded-full bg-third-color shadow-lg">
-                <Image src={getPageLogo()} alt="page_logo" width={500} height={500} className="w-[44.25px] h-[44.25px]" />
-              </div>
-            }
+          <SiJawiButton>
+            <h1
+              className={`${dynaPuff.className} text-[40px] font-bold text-white`}
+            >
+              Si Jawi
+            </h1>
+          </SiJawiButton>
         </div>
-    </>
-  )
-}
 
-export default Navbar
+        {typeof getPageLogo() === "string" && (
+          <div className="p-4 rounded-full bg-third-color shadow-lg">
+            <Image
+              src={getPageLogo()}
+              alt="page_logo"
+              width={500}
+              height={500}
+              className="w-[44.25px] h-[44.25px]"
+            />
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Navbar;

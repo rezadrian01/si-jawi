@@ -109,7 +109,7 @@ const LIST_VARIANTS = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.3, // Jeda antar anak (li) dalam detik
+      staggerChildren: 0.3,
     },
   },
 };

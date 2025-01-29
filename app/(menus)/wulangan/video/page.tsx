@@ -58,7 +58,7 @@ const VideoPage = () => {
               className="max-w-[18rem]"
             >
               <Image
-                src="/figure-2.svg"
+                src="/images/figure-2.png"
                 alt="figure"
                 width={500}
                 height={500}

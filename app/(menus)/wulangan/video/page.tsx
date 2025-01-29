@@ -5,6 +5,12 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import BackButton from "../../components/back-button";
+import { motion } from "framer-motion";
+import {
+  DEFAULT_FADE_IN_OUT_ANIMATION,
+  LEFT_CLOUD_ANIMATION,
+  RIGHT_CLOUD_ANIMATION,
+} from "../../lib/animations";
 
 const VideoPage = () => {
   const router = useRouter();
@@ -17,13 +23,19 @@ const VideoPage = () => {
   };
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-screen w-full overflow-hidden">
       <div className="flex h-full justify-between items-center max-w-[60rem] mx-auto">
-        <div className="flex flex-col justify-center items-center w-full text-center">
+        <div className="flex flex-col justify-center items-center w-full text-center mt-24">
           {/* Content */}
-          <div className="relative -mb-14">
+          <motion.div
+            variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="relative -mb-14"
+          >
             <Image
-              className="w-[35rem]"
+              className="w-[38rem]"
               src="/bubble-chat-4.svg"
               alt="bubble-chat"
               width={500}
@@ -35,24 +47,36 @@ const VideoPage = () => {
               ngrembug ngenani profil tokoh Sri Aji Jayabaya. Gatekna apa isi
               kang ana ing video kasebut. Sugeng mirsani!
             </p>
-          </div>
+          </motion.div>
           {/* Figure */}
           <div className="flex justify-start w-full">
-            <div className="max-w-[18rem]">
+            <motion.div
+              variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              className="max-w-[18rem]"
+            >
               <Image
                 src="/figure-2.svg"
                 alt="figure"
                 width={500}
                 height={500}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       {/* Absolute  elements */}
 
       {/* Cloud elements */}
-      <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+      <motion.div
+        variants={LEFT_CLOUD_ANIMATION}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
+      >
         <Image
           className="max-w-[25rem]"
           src="/left-cloud.svg"
@@ -60,9 +84,15 @@ const VideoPage = () => {
           width={500}
           height={500}
         />
-      </div>
+      </motion.div>
 
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+      <motion.div
+        variants={RIGHT_CLOUD_ANIMATION}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
+      >
         <Image
           className="max-w-[10rem]"
           src="/right-cloud.svg"
@@ -70,23 +100,29 @@ const VideoPage = () => {
           width={500}
           height={500}
         />
-      </div>
+      </motion.div>
 
       {/* Back Button */}
-      <BackButton onClick={handleBackClick} />
+      <BackButton animate onClick={handleBackClick} />
 
       {/* Next Button */}
-      <div className="absolute bottom-10 right-10 rotate-180">
+      <motion.div
+        variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="absolute bottom-10 right-10"
+      >
         <CircleButton onClick={handleNextClick}>
           <Image
-            className="aspect-square w-[3rem]"
+            className="aspect-square w-[3rem] scale-x-[-1]"
             src="/back.svg"
             alt="next-logo"
             width={500}
             height={500}
           />
         </CircleButton>
-      </div>
+      </motion.div>
     </div>
   );
 };

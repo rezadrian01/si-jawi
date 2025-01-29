@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`relative ${notoTraditionalNushu.className} antialiased bg-primary-color`}
+        className={`relative ${notoTraditionalNushu.className} antialiased bg-primary-color overflow-hidden`}
       >
         <Navbar />
         <LayoutWrapper>{children}</LayoutWrapper>

@@ -108,7 +108,7 @@ const GladhenPage = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="absolute left-0 top-[30%] -translate-y-1/2 -z-10"
+        className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
       >
         <Image
           className="max-w-[25rem]"
@@ -124,7 +124,7 @@ const GladhenPage = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="absolute right-0 top-1/2 -translate-y-1/2 -z-10"
+        className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
       >
         <Image
           className="max-w-[10rem]"

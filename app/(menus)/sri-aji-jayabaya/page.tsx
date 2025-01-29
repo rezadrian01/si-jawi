@@ -143,12 +143,33 @@ const SriAjiJayabayaPage = () => {
             </div>
 
             {/* Content 4 */}
-            <div className="flex flex-col justify-center items-center">
+            <div className="relative flex flex-col justify-center items-center">
                 <Image src="/location.svg" alt="location_icon" width={500} height={500} className="w-[60px] h-[60px]" />
 
                 <h3 className={`mt-4 ${dynaPuff.className} text-4xl font-bold text-center`}>Hubungan diplomatik kang apik<br/>klawan kerajaan-kerajaan Jawa</h3>
 
                 <Image src="/handshake.svg" alt="handshake_icon" width={240} height={240} />
+
+                {/* Woman */}
+                <div className="absolute left-0 top-[100%] -translate-y-1/2 -z-10">
+                    <Image
+                        src="/woman-figure-1.svg"
+                        alt="woman_figure"
+                        width={259}
+                        height={376}
+                        className='scale-x-[-1]'
+                    />
+                </div>
+
+                {/* Wayang */}
+                <div className="absolute right-0 top-[130%] -translate-y-1/2 -z-10">
+                    <Image
+                        src="/kelir-3.svg"
+                        alt="kelir-3"
+                        width={227}
+                        height={264}
+                    />
+                </div>
             </div>
 
             {/* Line */}
@@ -162,12 +183,33 @@ const SriAjiJayabayaPage = () => {
             </div>
 
             {/* Content 5 */}
-            <div className="flex flex-col justify-center items-center">
+            <div className="relative flex flex-col justify-center items-center">
                 <Image src="/location.svg" alt="location_icon" width={500} height={500} className="w-[60px] h-[60px]" />
 
                 <h3 className={`mt-4 ${dynaPuff.className} text-4xl font-bold text-center`}>Jayabaya raja sing adil lan wicaksana,<br/>ngatur pranatan kang ngutamakaké uripe<br/>kawula cilik lan kemakmurane praja.</h3>
 
                 <Image src="/scale.svg" alt="scale_icon" width={200} height={227} className='mt-8' />
+
+                {/* Cloud elements */}
+                <div className="absolute left-0 top-[110%] -translate-y-1/2 -z-10">
+                    <Image
+                        src="/left-cloud.svg"
+                        alt="cloud"
+                        width={500}
+                        height={500}
+                        className="max-w-[25rem]"
+                    />
+                </div>
+
+                {/* Man Figure */}
+                <div className="absolute right-0 top-[110%] -translate-y-1/2 -z-10">
+                    <Image
+                        src="/man-figure-3.svg"
+                        alt="man_figure"
+                        width={239}
+                        height={376}
+                    />
+                </div>
             </div>
 
             {/* Line */}
@@ -184,13 +226,33 @@ const SriAjiJayabayaPage = () => {
             </div>
 
             {/* Content 6 */}
-            <div className="flex flex-col justify-center items-center">
+            <div className="relative flex flex-col justify-center items-center">
                 <Image src="/location.svg" alt="location_icon" width={500} height={500} className="w-[60px] h-[60px]" />
 
                 <h3 className={`mt-4 ${dynaPuff.className} text-4xl font-bold text-center`}>Kondhang amarga ramalan-ramalane kang uga<br/>kasebut Jangka Jayabaya.</h3>
 
                 <div className="rounded-3xl overflow-hidden border-8 border-[#663D24] mt-8">
                     <Image src="/images/jayabaya.jpg" alt="jayabaya_image" width={545} height={363} />
+                </div>
+
+                {/* Woman */}
+                <div className="absolute left-0 top-[90%] -translate-y-1/2 -z-10">
+                    <Image
+                        src="/woman-figure-2.svg"
+                        alt="woman_figure"
+                        width={245}
+                        height={367}
+                    />
+                </div>
+
+                <div className="absolute right-0 top-[110%] -translate-y-1/2 -z-10">
+                    <Image
+                        className="max-w-[10rem]"
+                        src="/right-cloud.svg"
+                        alt="cloud"
+                        width={500}
+                        height={500}
+                    />
                 </div>
             </div>
 

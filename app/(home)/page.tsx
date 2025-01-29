@@ -2,12 +2,14 @@
 import { useEffect, useState } from "react";
 import { DynaPuff, Shantell_Sans, Noto_Traditional_Nushu } from "next/font/google";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const dynaPuff = DynaPuff({ subsets: ["latin"] })
 const shantellSans = Shantell_Sans({ subsets: ["latin"] })
 const notoTraditionalNushu = Noto_Traditional_Nushu({ subsets: ["latin"] })
 
 export default function Home() {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -17,6 +19,10 @@ export default function Home() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleRoute = (url: string) => {
+    router.push(url);
+  };
 
   return (
     <>
@@ -54,7 +60,7 @@ export default function Home() {
           <ul className="flex justify-center items-start mt-24 gap-x-8">
             {/* Home */}
             <li>
-              <button>
+              <button onClick={() => handleRoute("/")}>
                 <div className="p-6 bg-[#FF8F1B] rounded-full">
                   <Image src="/home.svg" alt="home_logo" width={500} height={500} className="h-[63.05px] w-[63.05px]" />
                 </div>
@@ -65,7 +71,7 @@ export default function Home() {
 
             {/* Profile */}
             <li>
-              <button>
+              <button onClick={() => handleRoute("/profile")}>
                 <div className="p-6 bg-[#FF8F1B] rounded-full">
                   <Image src="/profile.svg" alt="profile_logo" width={500} height={500} className="h-[63.05px] w-[63.05px]" />
                 </div>
@@ -76,7 +82,7 @@ export default function Home() {
 
             {/* Target */}
             <li>
-              <button>
+              <button onClick={() => handleRoute("/capaian-pasinaonan")}>
                 <div className="p-6 bg-[#FF8F1B] rounded-full">
                   <Image src="/target.svg" alt="target_logo" width={500} height={500} className="h-[63.05px] w-[63.05px]" />
                 </div>
@@ -87,7 +93,7 @@ export default function Home() {
 
             {/* Wulangan */}
             <li>
-              <button>
+              <button onClick={() => handleRoute("/wulangan")}>
                 <div className="p-6 bg-[#FF8F1B] rounded-full">
                   <Image src="/book.svg" alt="book_logo" width={500} height={500} className="h-[63.05px] w-[63.05px]" />
                 </div>
@@ -98,7 +104,7 @@ export default function Home() {
 
             {/* Sri Aji Jayabaya */}
             <li>
-              <button>
+              <button onClick={() => handleRoute("/sri-aji-jayabaya")}>
                 <div className="p-1.5 bg-[#FF8F1B] rounded-full">
                   <Image src="/puppet.svg" alt="puppet_logo" width={500} height={500} className="h-[99.05px] w-[99.05px]" />
                 </div>
@@ -109,7 +115,7 @@ export default function Home() {
 
             {/* Gladhen */}
             <li>
-              <button>
+              <button onClick={() => handleRoute("/gladhen")}>
                 <div className="p-6 bg-[#FF8F1B] rounded-full">
                   <Image src="/question.svg" alt="question_logo" width={500} height={500} className="h-[63.05px] w-[63.05px]" />
                 </div>

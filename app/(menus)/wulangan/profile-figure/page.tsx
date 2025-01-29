@@ -55,7 +55,7 @@ const ProfileFigurePage = () => {
                 <Image
                   priority
                   className="w-[18rem] scale-x-[-1]"
-                  src="/woman-figure-1.svg"
+                  src="/images/woman-figure-1.png"
                   alt="figure"
                   width={500}
                   height={500}
@@ -221,7 +221,7 @@ const ProfileFigurePage = () => {
               >
                 <Image
                   className="w-[18rem]"
-                  src="/woman-figure-1.svg"
+                  src="/images/woman-figure-1.png"
                   alt="figure"
                   width={500}
                   height={500}
@@ -340,7 +340,7 @@ const ProfileFigurePage = () => {
               >
                 <Image
                   className="w-[18rem]"
-                  src="/woman-figure-1.svg"
+                  src="/images/woman-figure-1.png"
                   alt="figure"
                   width={500}
                   height={500}

@@ -245,6 +245,7 @@ const SriAjiJayabayaPage = () => {
                     />
                 </div>
 
+                {/* Cloud */}
                 <div className="absolute right-0 top-[110%] -translate-y-1/2 -z-10">
                     <Image
                         className="max-w-[10rem]"

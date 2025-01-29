@@ -75,8 +75,55 @@ const DEFAULT_FADE_IN_OUT_ANIMATION = (
   };
 };
 
+const DEFAULT_FADE_IN_OUT_ANIMATION_WITHOUT_SCALE = (
+  delay?: number,
+  duration?: number
+) => {
+  return {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: duration || 0.5,
+        delay: delay || 0.2,
+        ease: [0, 0.71, 0.2, 1.01],
+        stiffness: 100,
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.1,
+        delay: 0.1,
+        ease: [0, 0.71, 0.2, 1.01],
+        stiffness: 100,
+      },
+    },
+  };
+};
+
+const LIST_VARIANTS = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // Jeda antar anak (li) dalam detik
+    },
+  },
+};
+
+const ITEM_VARIANTS = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export {
   LEFT_CLOUD_ANIMATION,
   RIGHT_CLOUD_ANIMATION,
   DEFAULT_FADE_IN_OUT_ANIMATION,
+  DEFAULT_FADE_IN_OUT_ANIMATION_WITHOUT_SCALE,
+  LIST_VARIANTS,
+  ITEM_VARIANTS,
 };

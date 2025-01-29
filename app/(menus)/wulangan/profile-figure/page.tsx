@@ -4,24 +4,33 @@ import CircleButton from "@/components/circle-button/circle-button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import {
+  DEFAULT_FADE_IN_OUT_ANIMATION,
+  LEFT_CLOUD_ANIMATION,
+  RIGHT_CLOUD_ANIMATION,
+} from "../../lib/animations";
+import { motion } from "framer-motion";
 
 const ProfileFigurePage = () => {
   const router = useRouter();
   const handleVideoClick = () => {
     router.push("/wulangan/video");
   };
-  const handleBackClick = () => {
-    router.replace("/");
-  };
 
   return (
-    <div className="h-[500vh] relative">
+    <div className="h-[500vh] relative overflow-hidden">
       <div className="h-full w-full divide-y-4 divide-secondary-color">
         <section className="h-screen relative">
           <div className="max-w-[80rem] h-full mx-auto flex justify-between relative">
             {/* Left */}
             <div className="flex flex-col justify-end pb-2 h-full">
-              <div className="relative -mb-4 ml-44 z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="relative -mb-4 ml-44 z-20"
+              >
                 <Image
                   priority
                   className="w-[30rem] "
@@ -36,8 +45,13 @@ const ProfileFigurePage = () => {
                   teks kang nggambarake tokoh lan prastawa apa wae sing tau
                   dialami dening tokoh kasebut.
                 </p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
                 <Image
                   priority
                   className="w-[18rem] scale-x-[-1]"
@@ -46,12 +60,18 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
 
             {/* Right */}
             <div className="flex flex-col justify-end pb-2 h-ful">
-              <div className="relative -mb-4 mr-44 z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.35)}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="relative -mb-4 mr-44 z-20"
+              >
                 <Image
                   priority
                   className="w-[25rem]"
@@ -66,8 +86,14 @@ const ProfileFigurePage = () => {
                   teks kang nggambarake tokoh lan prastawa apa wae sing tau
                   dialami dening tokoh kasebut.
                 </p>
-              </div>
-              <div className="w-full flex justify-end">
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.3)}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                className="w-full flex justify-end"
+              >
                 <Image
                   priority
                   className="w-[18rem]"
@@ -76,12 +102,18 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
             <div className="space-y-8"></div>
           </div>
           {/* Cloud elements */}
-          <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+          <motion.div
+            variants={LEFT_CLOUD_ANIMATION}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
+          >
             <Image
               priority
               className="max-w-[25rem]"
@@ -90,8 +122,14 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+          </motion.div>
+          <motion.div
+            variants={RIGHT_CLOUD_ANIMATION}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
+          >
             <Image
               priority
               className="max-w-[10rem]"
@@ -100,14 +138,21 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </section>
 
         <section className="h-screen relative">
           <div className="max-w-[80rem] h-full mx-auto flex justify-between relative">
             {/* Left */}
             <div className="flex flex-col justify-end pb-2 h-full">
-              <div className="relative -mb-4 ml-44 z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+                initial="hidden"
+                whileInView="visible"
+                // exit="exit"
+                viewport={{ once: true }}
+                className="relative -mb-4 ml-44 z-20"
+              >
                 <Image
                   className="w-[30rem] "
                   src="/bubble-chat-4.svg"
@@ -120,8 +165,14 @@ const ProfileFigurePage = () => {
                   teks profil tokoh ana telu struktur yaiku orientasi, prastawa,
                   lan reorientasi.
                 </p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+              >
                 <Image
                   className="w-[18rem] scale-x-[-1]"
                   src="/man-figure-1.svg"
@@ -129,13 +180,20 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
             <div className="space-y-8"></div>
 
             {/* Right */}
             <div className="flex flex-col justify-end pb-2 h-ful">
-              <div className="relative -mb-4 mr-44 z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.35)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+                className="relative -mb-4 mr-44 z-20"
+              >
                 <Image
                   className="w-[25rem]"
                   src="/bubble-chat-5.svg"
@@ -152,8 +210,15 @@ const ProfileFigurePage = () => {
                   ngenalake tokoh. Umume ngandharake jeneng, papan kelairan, lan
                   kaluwargane.
                 </p>
-              </div>
-              <div className="w-full flex justify-end">
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+                className="w-full flex justify-end"
+              >
                 <Image
                   className="w-[18rem]"
                   src="/woman-figure-1.svg"
@@ -161,12 +226,19 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
             <div className="space-y-8"></div>
           </div>
           {/* Cloud elements */}
-          <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+          <motion.div
+            variants={LEFT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[25rem]"
               src="/left-cloud.svg"
@@ -174,8 +246,15 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+          </motion.div>
+          <motion.div
+            variants={RIGHT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[10rem]"
               src="/right-cloud.svg"
@@ -183,14 +262,21 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </section>
 
         <section className="h-screen relative">
           <div className="max-w-[80rem] h-full mx-auto flex justify-between relative">
             {/* Left */}
             <div className="flex flex-col justify-end pb-2 h-full">
-              <div className="relative -mb-4 ml-44 z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+                className="relative -mb-4 ml-44 z-20"
+              >
                 <Image
                   className="w-[30rem] "
                   src="/bubble-chat-4.svg"
@@ -203,8 +289,14 @@ const ProfileFigurePage = () => {
                   kahanan, prastawa, prakara sing tau dialami tokoh lan kena di
                   gawe tuladha.
                 </p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+              >
                 <Image
                   className="w-[18rem] scale-x-[-1]"
                   src="/man-figure-1.svg"
@@ -212,12 +304,19 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
 
             {/* Right */}
             <div className="flex flex-col justify-end pb-2 h-ful">
-              <div className="relative -mb-4 mr-44 z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.35)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+                className="relative -mb-4 mr-44 z-20"
+              >
                 <Image
                   className="w-[25rem]"
                   src="/bubble-chat-5.svg"
@@ -230,8 +329,15 @@ const ProfileFigurePage = () => {
                   reorientasi isine ngandharake pamawase panulis marang
                   tokoh/paraga kang dicritakake.
                 </p>
-              </div>
-              <div className="w-full flex justify-end">
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+                className="w-full flex justify-end"
+              >
                 <Image
                   className="w-[18rem]"
                   src="/woman-figure-1.svg"
@@ -239,11 +345,18 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
           {/* Cloud elements */}
-          <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+          <motion.div
+            variants={LEFT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[25rem]"
               src="/left-cloud.svg"
@@ -251,8 +364,15 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+          </motion.div>
+          <motion.div
+            variants={RIGHT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[10rem]"
               src="/right-cloud.svg"
@@ -260,14 +380,21 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </section>
 
         <section className="h-screen relative">
           <div className="max-w-[80rem] h-full mx-auto flex justify-center items-center relative">
             {/* Center */}
             <div className="flex flex-col justify-end items-center pb-2 h-full">
-              <div className="relative -mb-4 -mr-[30rem] z-20">
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+                className="relative -mb-4 -mr-[30rem] z-20"
+              >
                 <Image
                   className="w-[30rem] "
                   src="/bubble-chat-4.svg"
@@ -281,8 +408,14 @@ const ProfileFigurePage = () => {
                   babagan nulis teks profil tokoh. Ayo gatekna materi ana ing
                   sisih tengen iki!
                 </p>
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                // exit="exit"
+              >
                 <Image
                   className="w-[20rem] scale-x-[-1]"
                   src="/man-figure-2.svg"
@@ -290,12 +423,19 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-              </div>
+              </motion.div>
             </div>
             <div className="space-y-8"></div>
           </div>
           {/* Cloud elements */}
-          <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+          <motion.div
+            variants={LEFT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[25rem]"
               src="/left-cloud.svg"
@@ -303,8 +443,15 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+          </motion.div>
+          <motion.div
+            variants={RIGHT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[10rem]"
               src="/right-cloud.svg"
@@ -312,13 +459,20 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </section>
 
         <section className="h-screen relative">
           <div className="max-w-[80rem] h-full mx-auto flex justify-center items-center relative">
             {/* Center */}
-            <div className="max-w-[50rem] p-10 border-8 border-secondary-color rounded-[3rem] flex flex-col items-center justify-center text-center font-semibold text-xl">
+            <motion.div
+              variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              // exit="exit"
+              className="max-w-[50rem] p-10 border-8 border-secondary-color rounded-[3rem] flex flex-col items-center justify-center text-center font-semibold text-xl"
+            >
               <h4 className="mb-4">
                 Nulis teks profil tokoh ana langkah-langkahe, yaiku:
               </h4>
@@ -353,10 +507,17 @@ const ProfileFigurePage = () => {
                   sakabehane data kang uwis disiapne ing langkah sadurunge.
                 </li>
               </ol>
-            </div>
+            </motion.div>
           </div>
           {/* Cloud elements */}
-          <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+          <motion.div
+            variants={LEFT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[25rem]"
               src="/left-cloud.svg"
@@ -364,8 +525,15 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+          </motion.div>
+          <motion.div
+            variants={RIGHT_CLOUD_ANIMATION}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            // exit="exit"
+            className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
+          >
             <Image
               className="max-w-[10rem]"
               src="/right-cloud.svg"
@@ -373,10 +541,10 @@ const ProfileFigurePage = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </section>
       </div>
-      {/* Back Button */}
+      {/* Video Button */}
       <div className="absolute bottom-10 right-10 rotate-180">
         <CircleButton onClick={handleVideoClick}>
           <Image
@@ -388,6 +556,7 @@ const ProfileFigurePage = () => {
           />
         </CircleButton>
       </div>
+      {/* <BackButton */}
     </div>
   );
 };

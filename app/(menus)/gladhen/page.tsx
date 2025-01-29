@@ -4,7 +4,14 @@ import CircleButton from "@/components/circle-button/circle-button";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { motion } from "framer-motion";
+
 import BackButton from "../components/back-button";
+import {
+  DEFAULT_FADE_IN_OUT_ANIMATION,
+  LEFT_CLOUD_ANIMATION,
+  RIGHT_CLOUD_ANIMATION,
+} from "../lib/animations";
 
 const GladhenPage = () => {
   const router = useRouter();
@@ -14,10 +21,16 @@ const GladhenPage = () => {
   };
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="relative h-screen w-full overflow-x-hidden">
       <div className="flex h-full justify-between items-center max-w-[60rem] mx-auto">
         <div className="flex flex-col gap-44 justify-between w-full text-center">
-          <div className="w-[15rem] flex flex-col justify-center items-center">
+          <motion.div
+            variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="w-[15rem] flex flex-col justify-center items-center"
+          >
             <CircleButton link="https://quizizz.com/join?gc=18290384">
               <Image
                 className="aspect-square w-[5rem]"
@@ -28,8 +41,14 @@ const GladhenPage = () => {
               />
             </CircleButton>
             <h3 className="font-semibold text-xl mt-4">Quizziz</h3>
-          </div>
-          <div className="w-[15rem] flex flex-col justify-center items-center">
+          </motion.div>
+          <motion.div
+            variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="w-[15rem] flex flex-col justify-center items-center"
+          >
             <CircleButton link="https://quizizz.com/join?gc=18290384">
               <Image
                 className="aspect-square w-[5rem] p-2"
@@ -40,10 +59,16 @@ const GladhenPage = () => {
               />
             </CircleButton>
             <h3 className="font-semibold text-xl mt-4">Gladhen</h3>
-          </div>
+          </motion.div>
         </div>
         <div className="flex flex-col items-center justify-center min-w-[40rem] ">
-          <div className="relative w-[40rem] -mb-14">
+          <motion.div
+            variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.3)}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="relative w-[40rem] -mb-14"
+          >
             <Image
               className="w-[37rem] mx-auto"
               src="/bubble-chat-3.svg"
@@ -56,9 +81,15 @@ const GladhenPage = () => {
               bakal ngrembug babagan teks profil tokoh. Ana sing weruh apa iku
               teks profil tokoh? Kepriye carane nulis teks profil tokoh kuwi?
             </p>
-          </div>
+          </motion.div>
           {/* Figure image */}
-          <div className="-mr-[40rem]">
+          <motion.div
+            variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="-mr-[40rem]"
+          >
             <Image
               className="w-[15rem]"
               src="/man-figure-3.svg"
@@ -66,13 +97,19 @@ const GladhenPage = () => {
               width={500}
               height={500}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Absolute  elements */}
 
       {/* Cloud elements */}
-      <div className="absolute left-0 top-[30%] -translate-y-1/2 -z-10">
+      <motion.div
+        variants={LEFT_CLOUD_ANIMATION}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="absolute left-0 top-[30%] -translate-y-1/2 -z-10"
+      >
         <Image
           className="max-w-[25rem]"
           src="/left-cloud.svg"
@@ -80,9 +117,15 @@ const GladhenPage = () => {
           width={500}
           height={500}
         />
-      </div>
+      </motion.div>
 
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 -z-10">
+      <motion.div
+        variants={RIGHT_CLOUD_ANIMATION}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        className="absolute right-0 top-1/2 -translate-y-1/2 -z-10"
+      >
         <Image
           className="max-w-[10rem]"
           src="/right-cloud.svg"
@@ -90,10 +133,10 @@ const GladhenPage = () => {
           width={500}
           height={500}
         />
-      </div>
+      </motion.div>
 
       {/* Back Button */}
-      <BackButton onClick={handleBackClick} />
+      <BackButton animate onClick={handleBackClick} />
     </div>
   );
 };

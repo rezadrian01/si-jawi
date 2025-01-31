@@ -12,6 +12,8 @@ import {
   DEFAULT_FADE_IN_OUT_ANIMATION,
   DEFAULT_FADE_IN_OUT_ANIMATION_WITHOUT_SCALE,
   ITEM_VARIANTS,
+  LEFT_CLOUD_ANIMATION,
+  RIGHT_CLOUD_ANIMATION,
 } from "../(menus)/lib/animations";
 
 const dynaPuff = DynaPuff({ subsets: ["latin"] });
@@ -36,119 +38,82 @@ export default function Home() {
 
   return (
     <div className="h-screen overflow-hidden">
-      {/* Kelir */}
-      <motion.div
-        variants={{
-          hidden: {
-            y: "100%",
-            opacity: 0,
-          },
-          visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-              bounce: 0,
-              delay: 1.5,
+      {!isLoading ? 
+      <>
+        {/* Kelir */}
+        <motion.div
+          variants={{
+            hidden: {
+              y: "100%",
+              opacity: 0,
             },
-          },
-          exit: {
-            y: "100%",
-            opacity: 0,
-            transition: {
-              bounce: 0,
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                bounce: 0,
+                delay: 1.5,
+              },
             },
-          },
-        }}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="fixed -bottom-8 left-[28.7px]"
-      >
-        <Image
-          src="/kelir.svg"
-          alt="kelir_img"
-          width={500}
-          height={500}
-          className="w-[277.14px] h-[263.81px]"
-        />
-      </motion.div>
+            exit: {
+              y: "100%",
+              opacity: 0,
+              transition: {
+                bounce: 0,
+              },
+            },
+          }}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="fixed -bottom-8 left-[28.7px]"
+        >
+          <Image
+            src="/kelir.svg"
+            alt="kelir_img"
+            width={500}
+            height={500}
+            className="w-[277.14px] h-[263.81px]"
+          />
+        </motion.div>
 
-      {/* Left Cloud */}
-      <motion.div
-        variants={{
-          hidden: {
-            x: "-100%",
-            opacity: 0,
-          },
-          visible: {
-            x: 0,
-            opacity: 1,
-            transition: {
-              bounce: 0,
-              delay: 1.5,
-            },
-          },
-          exit: {
-            x: "-100%",
-            opacity: 0,
-            transition: {
-              bounce: 0,
-            },
-          },
-        }}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="fixed top-[154.64px] -left-44"
-      >
-        <Image
-          src="/left-cloud.svg"
-          alt="left-cloud_img"
-          width={500}
-          height={500}
-          className="w-[601.9px] h-[234.13px]"
-        />
-      </motion.div>
+        {/* Left Cloud */}
+        <motion.div
+            variants={LEFT_CLOUD_ANIMATION}
+            initial="hidden"
+            animate="visible"
+            exit="exit" 
+            className="absolute -left-28 md:left-0 top-[25%] md:top-[20%] -translate-y-1/2 -z-10">
+            <Image
+                className="max-w-72 md:max-w-[25rem]"
+                src="/left-cloud.svg"
+                alt="cloud"
+                width={500}
+                height={500}
+            />
+        </motion.div>
 
-      {/* Right Cloud */}
-      <motion.div
-        variants={{
-          hidden: {
-            x: "100%",
-            opacity: 0,
-          },
-          visible: {
-            x: 0,
-            opacity: 1,
-            transition: {
-              bounce: 0,
-              delay: 1.5,
-            },
-          },
-          exit: {
-            x: "100%",
-            opacity: 0,
-            transition: {
-              bounce: 0,
-            },
-          },
-        }}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-        className="fixed top-[331.96px] -right-14"
-      >
-        <Image
-          src="/right-cloud.svg"
-          alt="right-cloud_img"
-          width={500}
-          height={500}
-          className="w-[228.87px] h-[111.29px]"
-        />
-      </motion.div>
+        {/* Right Cloud */}
+        <motion.div
+            variants={RIGHT_CLOUD_ANIMATION}
+            initial="hidden"
+            animate="visible"
+            exit="exit" 
+            className="absolute right-0 top-[40%] -translate-y-1/2 -z-10">
+            <Image
+                className="max-w-20 md:max-w-[10rem]"
+                src="/right-cloud.svg"
+                alt="cloud"
+                width={500}
+                height={500}
+            />
+        </motion.div>
+      </> : null}
+      
 
       <AnimatePresence>
         {isLoading ? (
+          // Loading screen
           <motion.div
             key={`${isLoading}`}
             initial={{ opacity: 1 }}
@@ -161,6 +126,8 @@ export default function Home() {
               priority
               width={500}
               height={500}
+              className="w-[286.57px] md:w-[500px] h-auto"
+              style={{ width: "auto", height: "auto" }}
             />
           </motion.div>
         ) : (
@@ -169,16 +136,18 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.5 } }}
             exit={{ opacity: 0 }}
+            className="relative z-50"
           >
-            <div className="h-[67.5px] bg-[#452A00]"></div>
+            <div className="h-[33.75] md:h-[67.5px] bg-[#452A00]"></div>
 
-            <div className="mt-8">
+            {/* Header */}
+            <div className="mt-6 md:mt-8">
               <motion.h1
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.5)}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className={`${dynaPuff.className} text-[80px] font-bold text-center`}
+                className={`${dynaPuff.className} text-[40px] md:text-[80px] leading-relaxed font-bold text-center`}
               >
                 Sinau Basa Jawi
               </motion.h1>
@@ -187,12 +156,13 @@ export default function Home() {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className={`${shantellSans.className} text-[56px] font-extrabold text-center`}
+                className={`${shantellSans.className} text-3xl md:text-[56px] leading-relaxed font-extrabold text-center`}
               >
                 ꦱꦶꦤꦲꦸꦧꦱꦗꦮꦶ
               </motion.h2>
             </div>
 
+            {/* Menu */}
             <motion.ul
               variants={{
                 hidden: { opacity: 0 },
@@ -207,23 +177,23 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               viewport={{ once: true }}
-              className="flex justify-center items-start mt-24 gap-x-8"
+              className="w-fit md:w-full grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-center lg:items-start mx-auto mt-12 md:mt-24 gap-x-0 md:gap-x-8"
             >
               {/* Home */}
-              <motion.li variants={ITEM_VARIANTS}>
-                <button onClick={() => handleRoute("/")}>
-                  <div className="p-6 bg-[#FF8F1B] rounded-full">
+              <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
+                <button onClick={() => handleRoute("/")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-6 bg-[#FF8F1B] rounded-full shadow-md">
                     <Image
                       src="/home.svg"
                       alt="home_logo"
                       width={500}
                       height={500}
-                      className="h-[63.05px] w-[63.05px]"
+                      className="h-[42.03px] md:h-[63.05px] w-[42.03px] md:w-[63.05px]"
                     />
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold font-xl text-center`}
+                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Home
                   </h5>
@@ -231,20 +201,20 @@ export default function Home() {
               </motion.li>
 
               {/* Profile */}
-              <motion.li variants={ITEM_VARIANTS}>
-                <button onClick={() => handleRoute("/profile")}>
-                  <div className="p-6 bg-[#FF8F1B] rounded-full">
+              <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
+                <button onClick={() => handleRoute("/profile")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-6 bg-[#FF8F1B] rounded-full shadow-md">
                     <Image
                       src="/profile.svg"
                       alt="profile_logo"
                       width={500}
                       height={500}
-                      className="h-[63.05px] w-[63.05px]"
+                      className="h-[42.03px] md:h-[63.05px] w-[42.03px] md:w-[63.05px]"
                     />
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold font-xl text-center`}
+                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Wewangunan
                   </h5>
@@ -252,20 +222,20 @@ export default function Home() {
               </motion.li>
 
               {/* Target */}
-              <motion.li variants={ITEM_VARIANTS}>
-                <button onClick={() => handleRoute("/capaian-pasinaonan")}>
-                  <div className="p-6 bg-[#FF8F1B] rounded-full">
+              <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
+                <button onClick={() => handleRoute("/capaian-pasinaonan")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-6 bg-[#FF8F1B] rounded-full shadow-md">
                     <Image
                       src="/target.svg"
                       alt="target_logo"
                       width={500}
                       height={500}
-                      className="h-[63.05px] w-[63.05px]"
+                      className="h-[42.03px] md:h-[63.05px] w-[42.03px] md:w-[63.05px]"
                     />
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold font-xl text-center`}
+                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Panjangka
                     <br />
@@ -275,20 +245,20 @@ export default function Home() {
               </motion.li>
 
               {/* Wulangan */}
-              <motion.li variants={ITEM_VARIANTS}>
-                <button onClick={() => handleRoute("/wulangan")}>
-                  <div className="p-6 bg-[#FF8F1B] rounded-full">
+              <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
+                <button onClick={() => handleRoute("/wulangan")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-6 bg-[#FF8F1B] rounded-full shadow-md">
                     <Image
                       src="/book.svg"
                       alt="book_logo"
                       width={500}
                       height={500}
-                      className="h-[63.05px] w-[63.05px]"
+                      className="h-[42.03px] md:h-[63.05px] w-[42.03px] md:w-[63.05px]"
                     />
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold font-xl text-center`}
+                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Wulangan
                   </h5>
@@ -296,20 +266,20 @@ export default function Home() {
               </motion.li>
 
               {/* Sri Aji Jayabaya */}
-              <motion.li variants={ITEM_VARIANTS}>
-                <button onClick={() => handleRoute("/sri-aji-jayabaya")}>
+              <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
+                <button onClick={() => handleRoute("/sri-aji-jayabaya")} className="flex flex-col items-center">
                   <div className="p-1.5 bg-[#FF8F1B] rounded-full">
                     <Image
                       src="/puppet.svg"
                       alt="puppet_logo"
                       width={500}
                       height={500}
-                      className="h-[99.05px] w-[99.05px]"
+                      className="h-[54.02px] md:h-[99.05px] w-[54.02px] md:w-[99.05px]"
                     />
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold font-xl text-center`}
+                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Sri Aji
                     <br />
@@ -319,20 +289,20 @@ export default function Home() {
               </motion.li>
 
               {/* Gladhen */}
-              <motion.li variants={ITEM_VARIANTS}>
-                <button onClick={() => handleRoute("/gladhen")}>
-                  <div className="p-6 bg-[#FF8F1B] rounded-full">
+              <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
+                <button onClick={() => handleRoute("/gladhen")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-6 bg-[#FF8F1B] rounded-full shadow-md">
                     <Image
                       src="/question.svg"
                       alt="question_logo"
                       width={500}
                       height={500}
-                      className="h-[63.05px] w-[63.05px]"
+                      className="h-[42.03px] md:h-[63.05px] w-[42.03px] md:w-[63.05px]"
                     />
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold font-xl text-center`}
+                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Gladhen
                   </h5>

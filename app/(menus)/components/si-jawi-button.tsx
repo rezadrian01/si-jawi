@@ -12,7 +12,7 @@ const SiJawiButton: FC<SiJawiButtonProps> = ({ children }) => {
   return (
     <button
       onClick={() => router.replace("/")}
-      className="py-2 px-4 bg-third-color rounded-3xl shadow-lg"
+      className="py-2 px-4 bg-third-color rounded-xl md:rounded-3xl shadow-lg"
     >
       {children}
     </button>

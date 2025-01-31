@@ -41,7 +41,7 @@ const Navbar = () => {
 
           <SiJawiButton>
             <h1
-              className={`${dynaPuff.className} text-[40px] font-bold text-white`}
+              className={`${dynaPuff.className} text-xl md:text-[40px] leading-relaxed font-bold text-white`}
             >
               Si Jawi
             </h1>
@@ -49,13 +49,13 @@ const Navbar = () => {
         </div>
 
         {typeof getPageLogo() === "string" && (
-          <div className="p-4 rounded-full bg-third-color shadow-lg">
+          <div className="p-3 md:p-4 rounded-full bg-third-color shadow-lg">
             <Image
               src={getPageLogo()}
               alt="page_logo"
               width={500}
               height={500}
-              className="w-[44.25px] h-[44.25px]"
+              className="w-[22.12px] md:w-[44.25px] h-[22.12px] md:h-[44.25px]"
             />
           </div>
         )}

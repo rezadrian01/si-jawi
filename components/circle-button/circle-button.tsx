@@ -16,7 +16,7 @@ const CircleButton: FC<CircleButtonProps> = ({
     <>
       {link === null && (
         <button
-          className="bg-third-color aspect-square rounded-full flex justify-center items-center p-6"
+          className="bg-third-color aspect-square rounded-full flex justify-center items-center p-4 md:p-6"
           onClick={onClick}
         >
           {children}
@@ -25,7 +25,7 @@ const CircleButton: FC<CircleButtonProps> = ({
       {link !== null && (
         <Link
           href={link}
-          className="bg-third-color aspect-square rounded-full flex justify-center items-center p-6"
+          className="bg-third-color aspect-square rounded-full flex justify-center items-center p-4 md:p-6"
           target="_blank"
         >
           {children}

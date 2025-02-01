@@ -39,7 +39,7 @@ const Drawer = () => {
   return (
     <>
         <button type="button" onClick={openDrawer}>
-            <Image src="/hamburger-menu-white.svg" alt="hamburger-menu-white_icon" width={500} height={500} className="w-[72px] h-[72px]"/>
+            <Image src="/hamburger-menu-white.svg" alt="hamburger-menu-white_icon" width={500} height={500} className="w-9 md:w-[72px] h-9 md:h-[72px]"/>
         </button>
 
         <div ref={drawerRef} className={`fixed top-0 left-0 z-40 h-screen overflow-y-auto transition-transform transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"} bg-white w-80`}>

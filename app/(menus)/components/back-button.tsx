@@ -28,11 +28,11 @@ const BackButton: FC<BackButtonProps> = ({ onClick, animate = false }) => {
       initial={animate ? "hidden" : ""}
       animate={animate ? "visible" : ""}
       exit={animate ? "exit" : ""}
-      className="absolute bottom-10 left-10 rounded-full shadow-lg z-10"
+      className="absolute bottom-4 md:bottom-10 left-4 md:left-10 rounded-full shadow-lg z-10"
     >
       <CircleButton onClick={handleBackClick}>
         <Image
-          className="aspect-square w-[3rem]"
+          className="aspect-square w-6 md:w-[3rem]"
           src="/back.svg"
           alt="back-logo"
           width={500}

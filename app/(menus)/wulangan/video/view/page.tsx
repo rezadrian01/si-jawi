@@ -31,7 +31,7 @@ const ViewVideoPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.25 } }}
             exit={{ opacity: 0 }}
-            className="w-[800] h-[450] border-8 border-secondary-color rounded-[3rem] flex items-center justify-center"
+            className="w-5/6 max-w-[800px] aspect-[16/9] border-8 border-secondary-color rounded-2xl md:rounded-[3rem] flex items-center justify-center"
           >
             <p>Video Placeholder (16:9)</p>
           </motion.div>
@@ -48,7 +48,7 @@ const ViewVideoPage = () => {
         className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
       >
         <Image
-          className="max-w-[25rem]"
+          className="max-w-72 md:max-w-[25rem]"
           src="/left-cloud.svg"
           alt="cloud"
           width={500}
@@ -64,7 +64,7 @@ const ViewVideoPage = () => {
         className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
       >
         <Image
-          className="max-w-[10rem]"
+          className="max-w-20 md:max-w-[10rem]"
           src="/right-cloud.svg"
           alt="cloud"
           width={500}
@@ -81,11 +81,11 @@ const ViewVideoPage = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        className="absolute bottom-10 right-10 rotate-180"
+        className="absolute bottom-4 right-4 md:bottom-10 md:right-10"
       >
         <CircleButton onClick={handleNextClick}>
           <Image
-            className="aspect-square w-[3rem] scale-x-[-1]"
+            className="aspect-square w-6 md:w-[3rem] scale-x-[-1]"
             src="/back.svg"
             alt="next-logo"
             width={500}

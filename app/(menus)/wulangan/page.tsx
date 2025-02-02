@@ -28,7 +28,7 @@ const WulanganPage = () => {
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      <div className="flex flex-col gap-2 lg:flex-row h-full justify-center lg:justify-between items-center max-w-[60rem] mx-auto border border-black">
+      <div className="flex flex-col gap-2 lg:flex-row h-full justify-center lg:justify-between items-center max-w-[60rem] mx-auto">
         <div className="flex lg:flex-col gap-20 lg:gap-44 justify-between w-full text-center">
           <motion.div
             variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}

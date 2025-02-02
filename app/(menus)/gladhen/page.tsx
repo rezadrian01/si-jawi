@@ -22,8 +22,8 @@ const GladhenPage = () => {
 
   return (
     <div className="relative h-screen w-full overflow-x-hidden">
-      <div className="flex h-full justify-between items-center max-w-[60rem] mx-auto">
-        <div className="flex flex-col gap-44 justify-between w-full text-center">
+      <div className="flex flex-col lg:flex-row h-full gap-10 lg:gap-0 justify-center lg:justify-between items-center max-w-[60rem] mx-auto">
+        <div className="flex flex-row lg:flex-col gap-44 justify-between w-full text-center">
           <motion.div
             variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
             initial="hidden"
@@ -33,14 +33,14 @@ const GladhenPage = () => {
           >
             <CircleButton link="https://quizizz.com/join?gc=18290384">
               <Image
-                className="aspect-square w-[5rem]"
+                className="aspect-square w-[3rem] md:w-[5rem]"
                 src="/quiz-text.svg"
                 alt="head-figure"
                 width={500}
                 height={500}
               />
             </CircleButton>
-            <h3 className="font-semibold text-xl mt-4">Quizziz</h3>
+            <h3 className="font-semibold text-xs md:text-xl mt-4">Quizziz</h3>
           </motion.div>
           <motion.div
             variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
@@ -51,35 +51,34 @@ const GladhenPage = () => {
           >
             <CircleButton link="https://quizizz.com/join?gc=18290384">
               <Image
-                className="aspect-square w-[5rem] p-2"
+                className="aspect-square w-[3rem] md:w-[5rem] p-2"
                 src="/gladhen.svg"
                 alt="record-logo"
                 width={500}
                 height={500}
               />
             </CircleButton>
-            <h3 className="font-semibold text-xl mt-4">Gladhen</h3>
+            <h3 className="font-semibold text-xs md:text-xl mt-4">Gladhen</h3>
           </motion.div>
         </div>
-        <div className="flex flex-col items-center justify-center min-w-[40rem] ">
+        <div className="flex flex-col items-center justify-center min-w-[40rem]">
           <motion.div
             variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.3)}
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="relative w-[40rem] -mb-14"
+            className="relative w-[40rem] -ml-20 md:-ml-52 -mb-14"
           >
             <Image
-              className="w-[37rem] mx-auto"
+              className="w-[18rem] md:w-[30rem] lg:w-[37rem] mx-auto"
               src="/bubble-chat-3.svg"
               alt="bubble-chat"
               width={500}
               height={500}
             />
-            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[40%] left-1/2 font-semibold text-2xl w-9/12">
-              Assalamualaikum bocah-bocah! Kepriye kabare? Ing kene awake dhewe
-              bakal ngrembug babagan teks profil tokoh. Ana sing weruh apa iku
-              teks profil tokoh? Kepriye carane nulis teks profil tokoh kuwi?
+            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[40%] left-1/2 font-semibold text-xs md:text-2xl w-[14rem] md:w-[25rem] lg:w-[35rem]">
+              Bocah-bocah, kanggo ngukur apa kang wis disinaoni, garapen quiz
+              lan gladhen iki kanthi bener ya...
             </p>
           </motion.div>
           {/* Figure image */}
@@ -88,12 +87,13 @@ const GladhenPage = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="-mr-[40rem]"
+            className="-mr-[15rem] -mb-10 lg:-mr-[40rem]"
           >
             <Image
-              className="w-[15rem]"
-              src="/man-figure-3.svg"
-              alt="woman-figure"
+              className="w-[7rem] md:w-[10rem] lg:w-[15rem]"
+              src="/images/man-figure-3.png"
+              alt="man-figure"
+              priority
               width={500}
               height={500}
             />
@@ -106,28 +106,31 @@ const GladhenPage = () => {
       <motion.div
         variants={LEFT_CLOUD_ANIMATION}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         exit="exit"
         className="absolute left-0 top-[20%] -translate-y-1/2 -z-10"
       >
         <Image
-          className="max-w-[25rem]"
+          priority
+          className="max-w-72 md:max-w-[25rem]"
           src="/left-cloud.svg"
           alt="cloud"
           width={500}
           height={500}
         />
       </motion.div>
-
       <motion.div
         variants={RIGHT_CLOUD_ANIMATION}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true }}
         exit="exit"
         className="absolute right-0 top-[40%] -translate-y-1/2 -z-10"
       >
         <Image
-          className="max-w-[10rem]"
+          priority
+          className="max-w-20 md:max-w-[10rem]"
           src="/right-cloud.svg"
           alt="cloud"
           width={500}

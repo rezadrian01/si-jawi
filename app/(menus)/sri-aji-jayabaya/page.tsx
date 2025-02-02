@@ -287,7 +287,7 @@ const SriAjiJayabayaPage = () => {
             className="hidden md:absolute left-0 top-[73%] -translate-y-1/2 -z-10"
           >
             <Image
-              src="/man-figure-1.svg"
+              src="/images/man-figure-1.png"
               alt="man_figure"
               width={233}
               height={365}
@@ -357,7 +357,7 @@ const SriAjiJayabayaPage = () => {
             viewport={{ once: true }}
             exit="exit"
             className={`mt-2 md:mt-4 ${dynaPuff.className} text-base md:text-4xl font-bold text-center`}
-            >
+          >
             Hubungan diplomatik kang apik
             <br />
             klawan kerajaan-kerajaan Jawa
@@ -444,7 +444,7 @@ const SriAjiJayabayaPage = () => {
               width={500}
               height={500}
               className="w-[23px] md:w-[60px] h-[23px] md:h-[60px]"
-              />
+            />
           </motion.div>
 
           <motion.h3
@@ -454,7 +454,7 @@ const SriAjiJayabayaPage = () => {
             viewport={{ once: true }}
             exit="exit"
             className={`mt-2 md:mt-4 ${dynaPuff.className} text-base md:text-4xl font-bold text-center`}
-            >
+          >
             Jayabaya raja sing adil lan wicaksana,
             <br />
             ngatur pranatan kang ngutamakaké uripe
@@ -558,7 +558,7 @@ const SriAjiJayabayaPage = () => {
             viewport={{ once: true }}
             exit="exit"
             className={`mt-2 md:mt-4 ${dynaPuff.className} text-base md:text-4xl font-bold text-center`}
-            >
+          >
             Kondhang amarga ramalan-ramalane kang uga
             <br />
             kasebut Jangka Jayabaya.
@@ -660,7 +660,7 @@ const SriAjiJayabayaPage = () => {
             viewport={{ once: true }}
             exit="exit"
             className={`mt-2 md:mt-4 ${dynaPuff.className} text-base md:text-4xl font-bold text-center`}
-            >
+          >
             Pamoksan
           </motion.h3>
 

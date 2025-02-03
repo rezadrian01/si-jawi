@@ -424,7 +424,7 @@ const ProfileFigurePage = () => {
                   Bocah-bocah saiki wis mudheng ya ngenani titikane lan struktur
                   ing teks profil tokoh. Saiki awake dhewe bakal ngrembug
                   babagan nulis teks profil tokoh. Ayo gatekna materi ana ing
-                  sisih tengen iki!
+                  isor iki!
                 </p>
               </motion.div>
               <motion.div

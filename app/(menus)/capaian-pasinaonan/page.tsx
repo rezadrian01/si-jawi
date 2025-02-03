@@ -75,7 +75,7 @@ const CapaianPasinaonanPage = () => {
               <br />
               Peserta didik menginterpretasikan informasi untuk mengungkapkan
               simpati, kepedulian, empati, atau pendapat pro dan kontra secara
-              santun (unggah-ungguh/tata krama) dari teks visual. Peserta didik
+              santun (unggah&ndash;ungguh/tata krama) dari teks visual. Peserta didik
               mampu mengeksplorasi dan mengevaluasi berbagai topik aktual yang
               dibaca dan dipirsa.
             </p>

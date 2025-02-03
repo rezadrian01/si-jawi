@@ -66,7 +66,7 @@ const Drawer = () => {
                             <Image src="/profile.svg" alt="profile_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>
         
-                        <h5 className={`${notoTraditionalNushu.className} font-bold font-xl text-center`}>Profil</h5>
+                        <h5 className={`${notoTraditionalNushu.className} font-bold font-xl text-center`}>Wewangunan</h5>
                     </button>
                 </li>
 

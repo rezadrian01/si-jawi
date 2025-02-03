@@ -37,10 +37,10 @@ export default function Home() {
   };
 
   return (
-    <div className="h-screen overflow-hidden">
+    <div className="relative h-screen overflow-hidden">
       {!isLoading ? 
       <>
-        {/* Kelir */}
+        {/* Kelir / Wayang for desktop */}
         <motion.div
           variants={{
             hidden: {
@@ -66,7 +66,7 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="fixed -bottom-8 left-[28.7px]"
+          className="hidden md:block fixed -bottom-8 left-[28.7px]"
         >
           <Image
             src="/kelir.svg"
@@ -74,6 +74,43 @@ export default function Home() {
             width={500}
             height={500}
             className="w-[277.14px] h-[263.81px]"
+          />
+        </motion.div>
+
+        {/* Kelir / Wayang for mobile */}
+        <motion.div
+          variants={{
+            hidden: {
+              y: "100%",
+              opacity: 0,
+            },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                bounce: 0,
+                delay: 1.5,
+              },
+            },
+            exit: {
+              y: "100%",
+              opacity: 0,
+              transition: {
+                bounce: 0,
+              },
+            },
+          }}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="block fixed md:hidden bottom-[20%] -left-[20%]"
+        >
+          <Image
+            src="/kelir-2.svg"
+            alt="kelir_img"
+            width={500}
+            height={500}
+            className="w-[138.57px]"
           />
         </motion.div>
 
@@ -107,6 +144,43 @@ export default function Home() {
                 width={500}
                 height={500}
             />
+        </motion.div>
+
+        {/* Man Figure for mobile */}
+        <motion.div
+          variants={{
+            hidden: {
+              y: "100%",
+              opacity: 0,
+            },
+            visible: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                bounce: 0,
+                delay: 1.5,
+              },
+            },
+            exit: {
+              y: "100%",
+              opacity: 0,
+              transition: {
+                bounce: 0,
+              },
+            },
+          }}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          className="block fixed md:hidden bottom-0 -right-5"
+        >
+          <Image
+            src="/default-man.svg"
+            alt="man_figure_img"
+            width={500}
+            height={500}
+            className="w-[83px]"
+          />
         </motion.div>
       </> : null}
       
@@ -177,7 +251,7 @@ export default function Home() {
               initial="hidden"
               animate="visible"
               viewport={{ once: true }}
-              className="w-fit md:w-full grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-center lg:items-start mx-auto mt-12 md:mt-24 gap-x-0 md:gap-x-8"
+              className="w-fit md:w-full grid grid-cols-2 md:grid-cols-3 lg:flex lg:justify-center lg:items-start mx-auto mt-12 md:mt-24 gap-y-2 md:gap-y-0 gap-x-0 md:gap-x-8"
             >
               {/* Home */}
               <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
@@ -193,7 +267,7 @@ export default function Home() {
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
+                    className={`mt-2 md:mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Home
                   </h5>
@@ -214,7 +288,7 @@ export default function Home() {
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
+                    className={`mt-2 md:mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Wewangunan
                   </h5>
@@ -235,7 +309,7 @@ export default function Home() {
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
+                    className={`mt-2 md:mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Panjangka
                     <br />
@@ -258,7 +332,7 @@ export default function Home() {
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
+                    className={`mt-2 md:mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Wulangan
                   </h5>
@@ -279,7 +353,7 @@ export default function Home() {
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
+                    className={`mt-2 md:mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Sri Aji
                     <br />
@@ -302,7 +376,7 @@ export default function Home() {
                   </div>
 
                   <h5
-                    className={`mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
+                    className={`mt-2 md:mt-4 ${notoTraditionalNushu.className} font-bold text-xs md:text-xl text-center`}
                   >
                     Gladhen
                   </h5>

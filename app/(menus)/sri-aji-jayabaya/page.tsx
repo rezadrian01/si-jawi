@@ -506,7 +506,7 @@ const SriAjiJayabayaPage = () => {
             className="hidden md:absolute right-0 top-[110%] -translate-y-1/2 -z-10"
           >
             <Image
-              src="/man-figure-3.svg"
+              src="/images/man-figure-3.png"
               alt="man_figure"
               width={239}
               height={376}

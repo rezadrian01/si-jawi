@@ -47,7 +47,7 @@ const WulanganPage = () => {
               />
             </CircleButton>
             <h3 className="font-semibold text-xs md:text-xl mt-4">
-              Teks Profile Tokoh
+              Teks Profil Tokoh
             </h3>
           </motion.div>
           <motion.div
@@ -67,7 +67,7 @@ const WulanganPage = () => {
               />
             </CircleButton>
             <h3 className="font-semibold text-xs md:text-xl mt-4">
-              Wulanagan Video
+              Wulangan Video
             </h3>
           </motion.div>
         </div>

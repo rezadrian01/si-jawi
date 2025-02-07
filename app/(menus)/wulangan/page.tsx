@@ -80,16 +80,14 @@ const WulanganPage = () => {
             className="relative w-[40rem] -mr-[23rem] md:-mr-[20rem]"
           >
             <Image
-              className="w-[20rem] md:w-[35rem]"
+              className="w-[20rem] md:w-[37rem]"
               src="/bubble-chat-1.svg"
               alt="bubble-chat"
               width={500}
               height={500}
             />
-            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/4 md:left-[45%] font-semibold text-xs md:text-2xl w-4/12 md:w-8/12">
-              Assalamualaikum bocah-bocah! Kepriye kabare? Ing kene awake dhewe
-              bakal ngrembug babagan teks profil tokoh. Ana sing weruh apa iku
-              teks profil tokoh? Kepriye carane nulis teks profil tokoh kuwi?
+            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/4 md:left-[45%] font-semibold text-xs md:text-2xl w-5/12 md:w-9/12">
+              Assalamualaikum bocah-bocah! Kepriye kabarmu kabeh? Apik ta? Ing kene awake dhewe bakal ngrembug babagan teks profil tokoh. Ana ing KBBI profil iku tegese pamawas ngenani wong liya, lukisan utawa gambaran ngenani wong liya. Ana sing weruh apa iku teks profil tokoh?
             </p>
           </motion.div>
 
@@ -107,9 +105,8 @@ const WulanganPage = () => {
               width={500}
               height={500}
             />
-            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[35%] left-1/2 font-semibold text-xs md:text-2xl w-9/12">
-              Ana ing sisih kiwa iki materi teks profil tokoh kang kudu
-              digatekake! Ayo sinau bebarengan!
+            <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[35%] left-1/2 font-semibold text-xs md:text-2xl w-10/12">
+              Ana ing sisih kiwa iki materi teks profil tokoh kang kudu digatekake. Ayo Cah sinau bebarengan!
             </p>
           </motion.div>
         </div>

@@ -33,17 +33,14 @@ const ProfileFigurePage = () => {
               >
                 <Image
                   priority
-                  className="w-[18.5rem] md:w-[30rem] mx-auto"
+                  className="w-[18.5rem] md:w-[32rem] mx-auto"
                   src="/bubble-chat-4.svg"
                   alt="bubble-chat"
                   width={500}
                   height={500}
                 />
                 <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-xs md:text-xl w-[15.5rem] md:w-[25rem]">
-                  Teks profil tokoh uga diarani teks biografi. Teks kasebut
-                  klebu sawijine jinise teks naratif. Teks profil tokoh yaiku
-                  teks kang nggambarake tokoh lan prastawa apa wae sing tau
-                  dialami dening tokoh kasebut.
+                  Teks profil tokoh uga diarani teks biografi. Teks kasebut klebu sawijine jinise teks naratif. Teks profil tokoh yaiku teks kang nggambarake tokoh lan prastawa apa wae sing tau dialami dening tokoh kasebut kayata perang, oleh jabatan, oleh gelar, pendidikan, lan sosial tokoh.
                 </p>
               </motion.div>
               <motion.div
@@ -82,7 +79,7 @@ const ProfileFigurePage = () => {
                 />
                 <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-left top-[40%] left-1/2 font-semibold text-xs md:text-xl w-[14rem] md:w-[24rem]">
                   Teks profil tokoh duweni titikan 3, yaiku:
-                  <ul className="list-disc">
+                  <ul className="list-decimal">
                     <li>
                       Ngemot informasi adhedhasar fakta (kasunyatan) paraga kang
                       di critakake sajrone wujud narasi.
@@ -169,11 +166,21 @@ const ProfileFigurePage = () => {
                   width={500}
                   height={500}
                 />
-                <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-xs md:text-xl w-[15.5rem] md:w-[25rem]">
-                  Sabanjure, ana apa wae struktur ing teks profil tokoh? Ing
-                  teks profil tokoh ana telu struktur yaiku orientasi, prastawa,
-                  lan reorientasi.
-                </p>
+                <div className="absolute z-20 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-semibold text-xs md:text-xl w-[15.5rem] md:w-[25rem]">
+                  <p className="text-center">Sabanjure, ana apa wae struktur teks profil tokoh? Ing teks profil tokoh ana telu stuktur, yaiku:</p>
+
+                  <div className="flex justify-center">
+                    <ul className="list-decimal">
+                      <li>
+                        Orientasi
+                      </li>
+                      <li>
+                        Prastawa
+                      </li>
+                      <li>Reorientasi</li>
+                    </ul>
+                  </div>
+                </div>
               </motion.div>
               <motion.div
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION()}
@@ -212,11 +219,10 @@ const ProfileFigurePage = () => {
                   height={500}
                 />
                 <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[40%] left-1/2 font-semibold text-xs md:text-xl w-[14rem] md:w-[24rem]">
-                  Saiki ayo njlentrehake bareng apa wae struktur teks profil
-                  tokoh.
+                  Saiki ayo, Cah! njlentrehake bareng apa wae struktur teks profil tokoh!
                   <br />
                   <br />
-                  Kaping siji ana orientasi, yaitu bagian teks kang isine
+                  Kaping siji ana <span className="font-extrabold">orientasi</span>, yaitu bagian teks kang isine
                   ngenalake tokoh. Umume ngandharake jeneng, papan kelairan, lan
                   kaluwargane.
                 </p>
@@ -298,9 +304,7 @@ const ProfileFigurePage = () => {
                   height={500}
                 />
                 <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-xs md:text-xl w-[15.5rem] md:w-[25rem]">
-                  Kaping loro yaiku prastawa. Prastawa iku isine ngandharake
-                  kahanan, prastawa, prakara sing tau dialami tokoh lan kena di
-                  gawe tuladha.
+                  Kaping loro yaiku <span className="font-extrabold">prastawa</span>. Prastawa iku isine ngandharake kahanan, prastawa, prakara sing tau dialami tokoh lan kena di gawe tuladha kayata sifat sabar tokoh ing kahanan apa wae.
                 </p>
               </motion.div>
               <motion.div
@@ -340,9 +344,7 @@ const ProfileFigurePage = () => {
                   height={500}
                 />
                 <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[40%] left-1/2 font-semibold text-xs md:text-xl w-[14rem] md:w-[24rem]">
-                  Struktur teks profil tokoh kaping telu yaiku reorientasi. Ing
-                  reorientasi isine ngandharake pamawase panulis marang
-                  tokoh/paraga kang dicritakake.
+                  Struktur teks profil tokoh kaping telu yaiku <span className="font-extrabold">reorientasi</span>. Ing reorientasi isine ngandharake pamawase panulis marang tokoh/paraga kang dicritakake kayata pungkasan uripe tokoh kang becik utawa akeh lelabuhane.
                 </p>
               </motion.div>
               <motion.div
@@ -421,10 +423,7 @@ const ProfileFigurePage = () => {
                   height={500}
                 />
                 <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-xs md:text-xl w-9/12">
-                  Bocah-bocah saiki wis mudheng ya ngenani titikane lan struktur
-                  ing teks profil tokoh. Saiki awake dhewe bakal ngrembug
-                  babagan nulis teks profil tokoh. Ayo gatekna materi ana ing
-                  isor iki!
+                  Bocah-bocah saiki wis mudheng ya ngenani titikane lan struktur ing teks profil tokoh. Saiki awake dhewe bakal ngrembug babagan nulis teks profil tokoh. Ayo gatekna materi ana isor iki!
                 </p>
               </motion.div>
               <motion.div
@@ -498,32 +497,23 @@ const ProfileFigurePage = () => {
               <ol className="text-left list-decimal">
                 <li>
                   Nemtokake tokoh idola <br />
-                  Tokoh idola iku titikane kaya apa? Tokoh idola yaiku tokoh
-                  kang disenengi masyarakat, ahli ing sawijine bidang, nduweni
-                  prestasi kang pinunjul, lan iso dadi panutan.
+                  Tokoh idola iku titikane kaya apa? Tokoh idola yaiku tokoh kang disenengi masyarakat, ahli ing sawijine bidang, nduweni prestasi kang pinunjul, lan iso dadi panutan kayata Raden Ajeng Kartini, Ir. Soekarno, B.J. Habibie lan tokoh-tokoh liyane.
                 </li>
                 <li>
-                  Golek referensi saka ngenani tokoh saka maneka sumber Sumber
-                  sing dikarepake yaiku tuladhane majalah utawa kalawarti, buku,
-                  lan internet.
+                  Golek referensi saka ngenani tokoh saka maneka sumber <br />
+                  Sumber sing dikarepake yaiku tuladhane majalah utawa kalawarti Panjebar Semangat, buku bografi utawa ensiklopedia tokoh, lan internet.
                 </li>
                 <li>
                   Ngolah data <br />
-                  Ngolah data ing kene nulis teks profil tokoh kanthi
-                  lelandhesan jati dhirine tokoh sing dipilih kanthi ringkes.
-                  Tuladhane jeneng, papan tanggal lair, asmane wong tuwane,
-                  cacahe kulawarga, riwayat pendhidhikan, riwayat penggawean,
-                  prastawa sing dialami, prestasi, lan kesan tokoh.
+                  Ngolah data ing kene nulis teks profil tokoh kanthi lelandhesan jati dhirine tokoh sing dipilih kanthi ringkes. Tuladhane jeneng, papan tanggal lair, asmane wong tuwane, cacahe kulawarga, riwayat pendhidhikan, riwayat penggawean, prastawa sing dialami, prestasi, lan kesan tokoh.
                 </li>
                 <li>
-                  Gawe cengkorongan <br />
-                  Sajrone gawe cengkorongan dideleng maneh struktur teks profil
-                  tokoh
+                  Gawe cengkorongan/kerangka <br />
+                  Sajrone gawe cengkorongan/kerangka dideleng maneh struktur teks profil tokoh iku apa wae data kang wis ditemokake.
                 </li>
                 <li>
                   Nulis teks profil tokoh <br />
-                  Babagan nulis teks profil tokoh iki bocah-bocah bakal nulis
-                  sakabehane data kang uwis disiapne ing langkah sadurunge.
+                  Babagan nulis teks profil tokoh iki bocah-bocah bakal nulis sakabehane data kang uwis disiapne ing langkah sadurunge.
                 </li>
               </ol>
             </motion.div>

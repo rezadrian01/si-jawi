@@ -489,33 +489,37 @@ const ProfileFigurePage = () => {
               whileInView="visible"
               viewport={{ once: true }}
               // exit="exit"
-              className="max-w-[50rem] p-6 md:p-10 border-4 md:border-8 border-secondary-color rounded-2xl md:rounded-[3rem] flex flex-col items-center justify-center text-center font-semibold  text-xs md:text-xl"
-            >
-              <h4 className="mb-4">
-                Nulis teks profil tokoh ana langkah-langkahe, yaiku:
-              </h4>
-              <ol className="text-left list-decimal">
-                <li>
-                  Nemtokake tokoh idola <br />
-                  Tokoh idola iku titikane kaya apa? Tokoh idola yaiku tokoh kang disenengi masyarakat, ahli ing sawijine bidang, nduweni prestasi kang pinunjul, lan iso dadi panutan kayata Raden Ajeng Kartini, Ir. Soekarno, B.J. Habibie lan tokoh-tokoh liyane.
-                </li>
-                <li>
-                  Golek referensi saka ngenani tokoh saka maneka sumber <br />
-                  Sumber sing dikarepake yaiku tuladhane majalah utawa kalawarti Panjebar Semangat, buku bografi utawa ensiklopedia tokoh, lan internet.
-                </li>
-                <li>
-                  Ngolah data <br />
-                  Ngolah data ing kene nulis teks profil tokoh kanthi lelandhesan jati dhirine tokoh sing dipilih kanthi ringkes. Tuladhane jeneng, papan tanggal lair, asmane wong tuwane, cacahe kulawarga, riwayat pendhidhikan, riwayat penggawean, prastawa sing dialami, prestasi, lan kesan tokoh.
-                </li>
-                <li>
-                  Gawe cengkorongan/kerangka <br />
-                  Sajrone gawe cengkorongan/kerangka dideleng maneh struktur teks profil tokoh iku apa wae data kang wis ditemokake.
-                </li>
-                <li>
-                  Nulis teks profil tokoh <br />
-                  Babagan nulis teks profil tokoh iki bocah-bocah bakal nulis sakabehane data kang uwis disiapne ing langkah sadurunge.
-                </li>
-              </ol>
+              className="relative max-w-[50rem] flex items-center justify-center"
+            > 
+              <Image src="/images/paper.png" alt="paper_img" width={500} height={500} className="min-w-fit min-h-[37rem] md:min-w-[60rem] md:min-h-auto" />
+              
+              <div className="w-full absolute text-center font-semibold text-xs md:text-xl">
+                <h4 className="mb-4">
+                  Nulis teks profil tokoh ana langkah-langkahe, yaiku:
+                </h4>
+                <ol className="text-left list-decimal">
+                  <li>
+                    Nemtokake tokoh idola <br />
+                    Tokoh idola iku titikane kaya apa? Tokoh idola yaiku tokoh kang disenengi masyarakat, ahli ing sawijine bidang, nduweni prestasi kang pinunjul, lan iso dadi panutan kayata Raden Ajeng Kartini, Ir. Soekarno, B.J. Habibie lan tokoh-tokoh liyane.
+                  </li>
+                  <li>
+                    Golek referensi saka ngenani tokoh saka maneka sumber <br />
+                    Sumber sing dikarepake yaiku tuladhane majalah utawa kalawarti Panjebar Semangat, buku bografi utawa ensiklopedia tokoh, lan internet.
+                  </li>
+                  <li>
+                    Ngolah data <br />
+                    Ngolah data ing kene nulis teks profil tokoh kanthi lelandhesan jati dhirine tokoh sing dipilih kanthi ringkes. Tuladhane jeneng, papan tanggal lair, asmane wong tuwane, cacahe kulawarga, riwayat pendhidhikan, riwayat penggawean, prastawa sing dialami, prestasi, lan kesan tokoh.
+                  </li>
+                  <li>
+                    Gawe cengkorongan/kerangka <br />
+                    Sajrone gawe cengkorongan/kerangka dideleng maneh struktur teks profil tokoh iku apa wae data kang wis ditemokake.
+                  </li>
+                  <li>
+                    Nulis teks profil tokoh <br />
+                    Babagan nulis teks profil tokoh iki bocah-bocah bakal nulis sakabehane data kang uwis disiapne ing langkah sadurunge.
+                  </li>
+                </ol>
+                </div>
             </motion.div>
           </div>
           {/* Cloud elements */}

@@ -157,7 +157,7 @@ const SriAjiJayabayaPage = () => {
             exit="exit"
             className={`mt-2 md:mt-4 ${dynaPuff.className} text-base md:text-4xl font-bold text-center`}
           >
-            Putra saka Raja Gendrayana
+            Putra saka Raja Kijing Wahana
           </motion.h3>
 
           <motion.div

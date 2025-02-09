@@ -21,15 +21,16 @@ const ProfileFigurePage = () => {
     <div className="h-[500vh] relative overflow-hidden">
       <div className="h-full w-full divide-y-4 divide-secondary-color">
         <section className="h-screen relative">
-          <div className="max-w-[80rem] h-full mx-auto flex flex-col-reverse lg:flex-row justify-between relative">
+          <div className="max-w-[80rem] h-full mx-auto flex flex-col lg:flex-row justify-between relative">
+
             {/* Left */}
-            <div className="flex flex-col justify-end items-start pb-2 h-full">
+            <div className="flex flex-col justify-end items-start pb-2 h-full ">
               <motion.div
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.25)}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="relative -m-10 md:-mb-10 ml-8 md:ml-14 lg:ml-24 z-20"
+                className="relative -m-16  ml-8 md:ml-14 lg:ml-24 z-20"
               >
                 <Image
                   priority
@@ -48,6 +49,7 @@ const ProfileFigurePage = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
+                className="mb-0 md:-mb-24 lg:mb-0"
               >
                 <Image
                   priority
@@ -61,13 +63,13 @@ const ProfileFigurePage = () => {
             </div>
 
             {/* Right */}
-            <div className="flex flex-col justify-end items-end h-full">
+            <div className="flex flex-col justify-start lg:justify-end items-end h-full">
               <motion.div
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.35)}
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="relative -mb-12 md:-mb-20 lg:-mb-32 mr-10 md:mr-24 lg:mr-32 z-20"
+                className="relative md:-mt-20 lg:-mb-28 mr-10 md:mr-24 lg:mr-32 z-20"
               >
                 <Image
                   priority
@@ -98,7 +100,7 @@ const ProfileFigurePage = () => {
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                className="w-full flex justify-end -mb-32 md:-mb-44 lg:mb-0"
+                className="w-full flex justify-end -mt-20 md:-mt-24 lg:-mt-0"
               >
                 <Image
                   priority
@@ -147,7 +149,8 @@ const ProfileFigurePage = () => {
         </section>
 
         <section className="h-screen relative">
-          <div className="max-w-[80rem] h-full mx-auto flex flex-col-reverse lg:flex-row justify-between relative">
+          <div className="max-w-[80rem] h-full mx-auto flex flex-col lg:flex-row justify-between relative">
+
             {/* Left */}
             <div className="flex flex-col justify-end items-start pb-2 h-full">
               <motion.div
@@ -156,7 +159,7 @@ const ProfileFigurePage = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 exit="exit"
-                className="relative -m-10 md:-mb-28 ml-8 md:ml-24 lg:ml-36 z-20"
+                className="relative -m-12 md:-m-20 ml-8 md:ml-24 lg:ml-36 z-20"
               >
                 <Image
                   priority
@@ -188,6 +191,7 @@ const ProfileFigurePage = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 exit="exit"
+                className="mb-0 md:-mb-16 lg:mb-0"
               >
                 <Image
                   priority
@@ -201,14 +205,14 @@ const ProfileFigurePage = () => {
             </div>
 
             {/* Right */}
-            <div className="flex flex-col justify-end items-end h-full">
+            <div className="flex flex-col justify-start lg:justify-end items-end h-full">
               <motion.div
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.35)}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 exit="exit"
-                className="relative -mb-12 md:-mb-20 lg:-mb-32 mr-10 md:mr-24 lg:mr-32 z-20"
+                className="relative -mb-16 md:-mt-20 lg:-mt-32 mr-4 md:mr-24 lg:mr-32 z-20"
               >
                 <Image
                   priority
@@ -233,7 +237,7 @@ const ProfileFigurePage = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 exit="exit"
-                className="w-full flex justify-end -mb-32 md:-mb-44 lg:mb-0"
+                className="w-full flex justify-end  md:-mb-44 lg:mb-0"
               >
                 <Image
                   priority
@@ -284,7 +288,7 @@ const ProfileFigurePage = () => {
         </section>
 
         <section className="h-screen relative">
-          <div className="max-w-[80rem] h-full mx-auto flex flex-col-reverse lg:flex-row justify-between relative">
+          <div className="max-w-[80rem] h-full mx-auto flex flex-col lg:flex-row justify-between relative">
             {/* Left */}
             <div className="flex flex-col justify-end items-start pb-2 h-full">
               <motion.div
@@ -313,6 +317,7 @@ const ProfileFigurePage = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 exit="exit"
+                className="md:-mb-24 lg:mb-0"
               >
                 <Image
                   priority
@@ -326,7 +331,7 @@ const ProfileFigurePage = () => {
             </div>
 
             {/* Right */}
-            <div className="flex flex-col justify-end items-end h-full">
+            <div className="flex flex-col justify-start lg:justify-end items-end h-full">
               <motion.div
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.35)}
                 initial="hidden"
@@ -353,7 +358,7 @@ const ProfileFigurePage = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 exit="exit"
-                className="w-full flex justify-end -mb-32 md:-mb-44 lg:mb-0"
+                className="w-full flex justify-end  lg:mb-0"
               >
                 <Image
                   priority

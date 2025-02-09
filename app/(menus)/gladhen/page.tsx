@@ -31,7 +31,7 @@ const GladhenPage = () => {
             exit="exit"
             className="w-[15rem] flex flex-col justify-center items-center"
           >
-            <CircleButton link="https://quizizz.com/join?gc=18290384">
+            <CircleButton link="https://bit.ly/Gladen_Quiz_Jayabaya">
               <Image
                 className="aspect-square w-[3rem] md:w-[5rem]"
                 src="/quiz-text.svg"
@@ -49,7 +49,7 @@ const GladhenPage = () => {
             exit="exit"
             className="w-[15rem] flex flex-col justify-center items-center"
           >
-            <CircleButton link="https://quizizz.com/join?gc=18290384">
+            <CircleButton link="https://bit.ly/Gladen_Teks_Profil_Tokoh">
               <Image
                 className="aspect-square w-[3rem] md:w-[5rem] p-2"
                 src="/gladhen.svg"

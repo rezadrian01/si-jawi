@@ -31,9 +31,17 @@ const ViewVideoPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.25 } }}
             exit={{ opacity: 0 }}
-            className="w-5/6 max-w-[800px] aspect-[16/9] border-8 border-secondary-color rounded-2xl md:rounded-[3rem] flex items-center justify-center"
+            className="w-5/6 max-w-[800px] aspect-[16/9] border-8 border-secondary-color rounded-xl md:rounded-[3rem] flex items-center justify-center overflow-hidden"
           >
-            <p>Video Placeholder (16:9)</p>
+            <video
+              className="w-full h-full object-cover"
+              controls
+              preload="none"
+              poster="/videos/thumbnail.png"
+            >
+              <source src="/videos/Video_Profil_Tokoh_Prabu_Jayabaya.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </motion.div>
         </div>
       </div>

@@ -43,7 +43,7 @@ const VideoPage = () => {
             />
             <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-xs md:text-2xl w-9/12">
               Babagan ngenani teks profil tokoh sampun rampung dibahas.
-              Bocah-bocah sampun paham nggih? Saiki ana video kang isine
+              Bocah&ndash;bocah sampun paham nggih? Saiki ana video kang isine
               ngrembug ngenani profil tokoh Sri Aji Jayabaya. Gatekna apa isi
               kang ana ing video kasebut. Sugeng mirsani!
             </p>

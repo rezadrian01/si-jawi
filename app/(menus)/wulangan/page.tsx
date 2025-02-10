@@ -87,7 +87,7 @@ const WulanganPage = () => {
               height={500}
             />
             <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/4 md:left-[45%] font-semibold text-xs md:text-2xl w-5/12 md:w-9/12">
-              Assalamualaikum bocah-bocah! Kepriye kabarmu kabeh? Apik ta? Ing kene awake dhewe bakal ngrembug babagan teks profil tokoh. Ana ing KBBI profil iku tegese pamawas ngenani wong liya, lukisan utawa gambaran ngenani wong liya. Ana sing weruh apa iku teks profil tokoh?
+              Assalamualaikum bocah&ndash;bocah! Kepriye kabarmu kabeh? Apik ta? Ing kene awake dhewe bakal ngrembug babagan teks profil tokoh. Ana ing KBBI profil iku tegese pamawas ngenani wong liya, lukisan utawa gambaran ngenani wong liya. Ana sing weruh apa iku teks profil tokoh?
             </p>
           </motion.div>
 

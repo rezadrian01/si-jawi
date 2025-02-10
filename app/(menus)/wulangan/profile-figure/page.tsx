@@ -428,7 +428,7 @@ const ProfileFigurePage = () => {
                   height={500}
                 />
                 <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-1/2 left-1/2 font-semibold text-xs md:text-xl w-9/12">
-                  Bocah-bocah saiki wis mudheng ya ngenani titikane lan struktur ing teks profil tokoh. Saiki awake dhewe bakal ngrembug babagan nulis teks profil tokoh. Ayo gatekna materi ana isor iki!
+                  Bocah&ndash;bocah saiki wis mudheng ya ngenani titikane lan struktur ing teks profil tokoh. Saiki awake dhewe bakal ngrembug babagan nulis teks profil tokoh. Ayo gatekna materi ana isor iki!
                 </p>
               </motion.div>
               <motion.div
@@ -500,7 +500,7 @@ const ProfileFigurePage = () => {
               
               <div className="w-full absolute text-center font-semibold text-xs md:text-xl">
                 <h4 className="mb-4">
-                  Nulis teks profil tokoh ana langkah-langkahe, yaiku:
+                  Nulis teks profil tokoh ana langkah&ndash;langkahe, yaiku:
                 </h4>
                 <ol className="text-left list-decimal">
                   <li>
@@ -521,7 +521,7 @@ const ProfileFigurePage = () => {
                   </li>
                   <li>
                     Nulis teks profil tokoh <br />
-                    Babagan nulis teks profil tokoh iki bocah-bocah bakal nulis sakabehane data kang uwis disiapne ing langkah sadurunge.
+                    Babagan nulis teks profil tokoh iki bocah&ndash;bocah bakal nulis sakabehane data kang uwis disiapne ing langkah sadurunge.
                   </li>
                 </ol>
                 </div>

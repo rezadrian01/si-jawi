@@ -77,7 +77,7 @@ const GladhenPage = () => {
               height={500}
             />
             <p className="absolute z-20 -translate-x-1/2 -translate-y-1/2 text-center top-[40%] left-1/2 font-semibold text-xs md:text-2xl w-[14rem] md:w-[25rem] lg:w-[35rem]">
-              Bocah-bocah, kanggo ngukur apa kang wis disinaoni, garapen quiz lan gladhen iki kanthi bener ya, …!
+              Bocah&ndash;bocah, kanggo ngukur apa kang wis disinaoni, garapen quiz lan gladhen iki kanthi bener ya, …!
             </p>
           </motion.div>
           {/* Figure image */}

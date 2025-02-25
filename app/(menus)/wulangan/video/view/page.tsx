@@ -13,7 +13,7 @@ import {
 import BackButton from "@/app/(menus)/components/back-button";
 
 const ViewVideoPage = () => {
-  const router = useRouter();
+  const router = useRouter();  
   const handleBackClick = () => {
     router.back();
   };

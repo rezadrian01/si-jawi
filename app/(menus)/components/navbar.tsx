@@ -24,6 +24,8 @@ const Navbar = () => {
       return "/book.svg";
     } else if (location === "gladhen") {
       return "/question.svg";
+    } else if (location === "panuntun-migunakake") {
+      return "/bell.svg";
     }
 
     return "";

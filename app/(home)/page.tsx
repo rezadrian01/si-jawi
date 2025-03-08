@@ -184,7 +184,6 @@ export default function Home() {
         </motion.div>
       </> : null}
       
-
       <AnimatePresence>
         {isLoading ? (
           // Loading screen
@@ -210,12 +209,34 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { delay: 0.5 } }}
             exit={{ opacity: 0 }}
-            className="relative z-50"
+            className="relative z-50 h-full"
           >
             <div className="h-[33.75] md:h-[67.5px] bg-[#452A00]"></div>
 
+            {/* Panuntun Migunakake for tablet and desktop */}
+            <motion.div variants={ITEM_VARIANTS} className="hidden md:block absolute top-0 bottom-0 md:top-auto md:bottom-8 lg:top-20 lg:bottom-auto right-16 z-10">
+                <button onClick={() => handleRoute("/panuntun-migunakake")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-3.5 bg-[#FF8F1B] rounded-full shadow-md">
+                    <Image
+                      src="/bell.svg"
+                      alt="bell_logo"
+                      width={500}
+                      height={500}
+                      className="h-[42.03px] md:h-[40px] w-[42.03px] md:w-[40px]"
+                    />
+                  </div>
+
+                  <h5
+                    className={`mt-2 md:mt-2 ${notoTraditionalNushu.className} font-bold text-xs md:text-sm text-center`}
+                  >
+                    Panuntun<br/>Migunakake
+                  </h5>
+                </button>
+              </motion.div>
+
+
             {/* Header */}
-            <div className="mt-6 md:mt-8">
+            <div className="relative mt-6 md:mt-8">
               <motion.h1
                 variants={DEFAULT_FADE_IN_OUT_ANIMATION(0.5)}
                 initial="hidden"
@@ -382,6 +403,27 @@ export default function Home() {
                   </h5>
                 </button>
               </motion.li>
+
+              {/* Panuntun Migunakake for mobile */}
+              <motion.div variants={ITEM_VARIANTS} className="col-span-2 block md:hidden flex justify-center">
+                <button onClick={() => handleRoute("/panuntun-migunakake")} className="flex flex-col items-center">
+                  <div className="p-3 md:p-3.5 bg-[#FF8F1B] rounded-full shadow-md">
+                    <Image
+                      src="/bell.svg"
+                      alt="bell_logo"
+                      width={500}
+                      height={500}
+                      className="h-[42.03px] md:h-[40px] w-[42.03px] md:w-[40px]"
+                    />
+                  </div>
+
+                  <h5
+                    className={`mt-2 md:mt-2 ${notoTraditionalNushu.className} font-bold text-xs md:text-sm text-center`}
+                  >
+                    Panuntun<br/>Migunakake
+                  </h5>
+                </button>
+              </motion.div>
             </motion.ul>
           </motion.div>
         )}

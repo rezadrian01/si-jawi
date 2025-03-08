@@ -53,7 +53,7 @@ const ProfilePage = () => {
           animate="visible"
           exit="exit"
           className="min-h-screen min-w-full flex justify-center items-center">
-          <div className="p-8 w-full max-w-xs md:max-w-3xl bg-white flex flex-col items-center mx-auto rounded-3xl md:rounded-[50px] shadow-lg">
+          <div className="p-8 md:p-16 w-full max-w-xs md:max-w-4xl bg-white flex flex-col items-center mx-auto rounded-3xl md:rounded-[50px] shadow-lg">
             {/* Image */}
             <div className="rounded-full overflow-hidden border-4 md:border-8 border-secondary-color">  
               <Image priority src="/images/foto.jpg" alt="profile_image" width={500} height={500} className="w-[115.85px] md:w-[231.7px] h-[115.85px] md:h-[231.7px]" />
@@ -64,6 +64,8 @@ const ProfilePage = () => {
               <p className="text-xs md:text-xl font-bold text-center">Retno Anjani</p>
               <p className="text-xs md:text-xl font-bold text-center">NIM 210211602807</p>
               <p className="text-xs md:text-xl font-bold text-center">Program Studi S1 Pendidikan Bahasa, Sastra Indonesia dan Daerah</p>
+              
+              <p className="mt-4 text-xs md:text-base font-bold text-center">Peneliti kuliah ing Universitas Negeri Malang, Jurusan Sastra Indonesia lan mundhut peminatan Basa Jawa. Lair lan gedhe ana ing Kabupaten Kediri, Jawa Timur. Peneliti duweni minat marang basa jawa lan kepingin nguri-nguri Budaya Jawa.</p>
             </div>
           </div>
         </motion.div>

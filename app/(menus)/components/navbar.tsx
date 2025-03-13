@@ -21,7 +21,7 @@ const Navbar = () => {
     } else if (location === "capaian-pasinaonan") {
       return "/target.svg";
     } else if (location === "sri-aji-jayabaya") {
-      return "/book.svg";
+      return "/images/wayang.png";
     } else if (location === "gladhen") {
       return "/question.svg";
     } else if (location === "panuntun-migunakake") {

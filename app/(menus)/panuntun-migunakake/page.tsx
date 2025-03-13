@@ -14,7 +14,7 @@ const dynaPuff = DynaPuff({ subsets: ["latin"] });
 const PanuntunMigunakakePage = () => {
   return (
     <>
-        <section className="h-screen relative">
+        <section className="h-screen relative overflow-x-hidden md:overflow-x-auto">
             <div className="max-w-[80rem] h-full mx-auto flex justify-center items-center relative px-6">
                 {/* Center */}
                 <motion.div
@@ -23,25 +23,25 @@ const PanuntunMigunakakePage = () => {
                     whileInView="visible"
                     viewport={{ once: true }}
                     // exit="exit"
-                    className="relative max-w-[50rem] flex items-center justify-center"
+                    className="relative max-w-screen lg:max-w-[50rem] flex items-center justify-center"
                 >
                     <Image
                     src="/images/paper.png"
                     alt="paper_img"
                     width={500}
                     height={500}
-                    className="min-w-fit min-h-[37rem] md:min-w-[60rem] md:min-h-auto"
+                    className="min-w-fit min-h-[34rem] lg:min-w-[60rem] lg:min-h-auto"
                     />
 
-                    <div className="w-full absolute text-center font-semibold text-xs md:text-xl">
-                        <h4 className={`mb-2.5 ${dynaPuff.className} text-base md:text-2xl font-normal`}>
+                    <div className="absolute">
+                        <h4 className={`mb-2.5 ${dynaPuff.className} text-center text-base md:text-2xl font-normal`}>
                             Tuntunan anggenipun nggunakake situs pasinaon 
                         </h4>
-                        <h4 className={`${dynaPuff.className} text-3xl md:text-5xl font-bold`}>
+                        <h4 className={`${dynaPuff.className} text-center text-3xl md:text-5xl font-bold`}>
                             Sinau Basa Jawi
                         </h4>
 
-                        <ol className="mt-6 text-left list-decimal">
+                        <ol className="mt-6 text-left list-decimal font-semibold text-xs md:text-base text-wrap">
                             <li>
                                 Media memirsa profil tokoh iki damêl murid kelas 7 SMP.
                             </li>

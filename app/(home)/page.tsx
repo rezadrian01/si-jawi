@@ -363,13 +363,13 @@ export default function Home() {
               {/* Sri Aji Jayabaya */}
               <motion.li variants={ITEM_VARIANTS} className="flex justify-center">
                 <button onClick={() => handleRoute("/sri-aji-jayabaya")} className="flex flex-col items-center">
-                  <div className="p-1.5 bg-[#FF8F1B] rounded-full">
+                  <div className="p-3 md:p-6 bg-[#FF8F1B] rounded-full shadow-md">
                     <Image
-                      src="/puppet.svg"
-                      alt="puppet_logo"
+                      src="/images/wayang.png"
+                      alt="wayang_logo"
                       width={500}
                       height={500}
-                      className="h-[54.02px] md:h-[99.05px] w-[54.02px] md:w-[99.05px]"
+                      className="h-[42.03px] md:h-[63.05px] w-[42.03px] md:w-[63.05px]"
                     />
                   </div>
 

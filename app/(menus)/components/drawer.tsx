@@ -95,8 +95,8 @@ const Drawer = () => {
                 {/* Sri Aji Jayabaya */}
                 <li>
                     <button onClick={() => handleRoute("/sri-aji-jayabaya")} className="w-full pl-6 py-2 flex items-center gap-x-4 rounded-lg hover:bg-third-color/[.45]">
-                        <div className="p-1 bg-[#FF8F1B] rounded-full">
-                            <Image src="/puppet.svg" alt="puppet_logo" width={500} height={500} className="w-[50.25px] h-[50.25px]" />
+                        <div className="p-3.5 bg-[#FF8F1B] rounded-full">
+                            <Image src="/images/wayang.png" alt="wayang_logo" width={500} height={500} className="w-[30.25px] h-[30.25px]" />
                         </div>
         
                         <h5 className={`${notoTraditionalNushu.className} font-bold font-xl text-center`}>Sri Aji Jayabaya</h5>
